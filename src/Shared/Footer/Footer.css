@@ -1,0 +1,8 @@
+ul li{
+    position: relative;
+    transition:0.5s;
+    cursor: pointer;
+}
+ul li:hover{
+    color: #28597D;
+}

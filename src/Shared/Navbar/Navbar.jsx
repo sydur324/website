@@ -25,6 +25,12 @@ const Navbar = () => {
             else setChangeColor(false);
         })
     }, [])
+
+    const [sToggle, setSToggle] = useState(false)
+    const sHandle = () => {
+        setSToggle(!sToggle)
+        console.log('hellow')
+    }
     return (
 
         <div className='relative'>
@@ -62,7 +68,7 @@ const Navbar = () => {
 
                 {/* ---NavLink-start--- */}
                 <div className=''>
-                    <div className={`xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 bg-[#E5E5E5] hidden lg:block fixed   w-full duration-300 ${changeColor ? " duration-300 shadow-md" : ""}`}>
+                    <div className={`xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 bg-[#E5E5E5] hidden lg:block fixed border-b border-white   w-full duration-300 ${changeColor ? " duration-300 shadow-md" : ""}`}>
 
                         <div className='flex items-center justify-between'>
                             <div className='flex space-x-8'>
@@ -78,8 +84,8 @@ const Navbar = () => {
                             </div>
 
                             <div className='flex items-center justify-center space-x-6'>
-                                <p className='text-2xl'><CiSearch></CiSearch></p>
-                                <div className='h-full  bg-[#005581] px-6 py-3 text-white relative inline-block hover:bg-[#081839] duration-200 cursor-pointer'>
+                                <p onClick={sHandle} className='text-2xl cursor-pointer'><CiSearch></CiSearch></p>
+                                <div className='h-full  bg-[#005581] px-6 py-3 text-white relative inline-block hover:bg-[#081839] duration-300 cursor-pointer'>
                                     <button className=''>Published Your Journals</button>
                                 </div>
                             </div>
@@ -132,7 +138,11 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <SearchBar></SearchBar>
+            <div>
+                {
+                    sToggle ? <><SearchBar></SearchBar> </> : <></>
+                }
+            </div>
         </div>
     );
 };
