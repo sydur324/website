@@ -4,12 +4,13 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import SearchBar from '../../Utilis/SearchBar/SearchBar';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
     const navLink = [
-        { id: 1, name: "Home", to: "" },
-        { id: 2, name: "Journals", to: "" },
+        { id: 1, name: "Home", to: "/" },
+        { id: 2, name: "Journals", to: "journals" },
         { id: 3, name: "Publish", to: "" },
         { id: 4, name: "Research", to: "" },
         { id: 5, name: "About", to: "" },
@@ -18,6 +19,25 @@ const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [changeColor, setChangeColor] = useState()
+
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 10) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -67,17 +87,19 @@ const Navbar = () => {
                 {/* ---head-nav-end--- */}
 
                 {/* ---NavLink-start--- */}
-                <div className=''>
-                    <div className={`xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 bg-[#E5E5E5] hidden lg:block fixed border-b border-white   w-full duration-300 ${changeColor ? " duration-300 shadow-md" : ""}`}>
+                <div className={isSticky ? 'sticky z-50 duration-300' : ''}>
+                    <div className={`xl:px-20 lg:px-16 z-50 md:px-14 sm:px-12 px-12  bg-[#E5E5E5] hidden lg:block  w-full duration-300 ${changeColor ? " duration-300 bg-[#E5E5E5] z-50 shadow-md" : ""}`}>
 
                         <div className='flex items-center justify-between'>
                             <div className='flex space-x-8'>
                                 {
                                     navLink.map(nav => <li className='list-none flex' key={nav.id}>
 
-                                        <p className='flex items-center space-x-1 font-medium hover:text-[#005581] duration-300 cursor-pointer'>
-                                            <span>{nav.name}</span><span className='text-[#005581] font-bold text-lg'>+</span>
-                                        </p>
+                                        <Link to={nav.to}>
+                                            <p className='flex items-center space-x-1 font-medium hover:text-[#005581] duration-300 cursor-pointer'>
+                                                <span>{nav.name}</span><span className='text-[#005581] font-bold text-lg'>+</span>
+                                            </p>
+                                        </Link>
 
                                     </li>)
                                 }
@@ -85,7 +107,7 @@ const Navbar = () => {
 
                             <div className='flex items-center justify-center space-x-6'>
                                 <p onClick={sHandle} className='text-2xl cursor-pointer'><CiSearch></CiSearch></p>
-                                <div className='h-full  bg-[#005581] px-6 py-3 text-white relative inline-block hover:bg-[#081839] duration-300 cursor-pointer'>
+                                <div className='h-full  bg-[#F96E54] px-6 py-5 text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
                                     <button className=''>Published Your Journals</button>
                                 </div>
                             </div>

@@ -1,4 +1,6 @@
-.menubar{
-    position: sticky;
-    top:0px;
-}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Your sticky navigation styles */
+  }

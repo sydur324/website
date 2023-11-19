@@ -1,5 +1,6 @@
 .banner-dots .slick-dots{
-    bottom:0px;
+    bottom:-20px;
+    padding:40px 0;
 }
 .banner-dots .slick-dots li button::before{
     font-size:0px;
@@ -11,9 +12,42 @@
     height:10px;
 }
 .banner-dots .slick-dots li.slick-active{
-    background-color:#A90633;
+    background-color:#F46957;
     width:30px;
 }
 .banner-dots .slick-arrow::before{
     display:none;
+}
+
+.banner{
+    background-image:url(../../../assets/image/banner01.jpeg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.banner::before{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:#010a10b9;
+    top:0;
+    left:0;
+    content:"";
+}
+.banner2{
+    background-image:url(../../../assets/image/banner02.jpeg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.banner2::before{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:#010a10a1;
+    top:0;
+    left:0;
+    content:"";
 }

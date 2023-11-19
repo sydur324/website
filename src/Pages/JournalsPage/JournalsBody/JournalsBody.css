@@ -1,0 +1,14 @@
+
+.pageNumder li{
+    background-color:#F46957;
+    color:#fff;
+    padding:2px;
+    transition:0.5s;
+}
+.pageNumder li:hover{
+    background-color:#2D5A7C;
+}
+
+.pageNumder li.active{
+    background-color:#2D5A7C;
+}

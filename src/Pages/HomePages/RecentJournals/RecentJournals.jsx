@@ -67,10 +67,10 @@ const RecentJournals = () => {
             </div>
 
 
-            <div className="py-8 card-dots">
+            <div className="py-8 card-dots ">
                 <Slider   {...settings}>
                     {
-                        recent.map((jounral, index) => <Card key={jounral.index} jounral={jounral} >
+                        recent.map((jounral, index) => <Card className="" key={jounral.index} jounral={jounral} >
 
                         </Card>)
                     }

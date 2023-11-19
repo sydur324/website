@@ -3,6 +3,7 @@
         "image": "https://i.ibb.co/dL6fqpw/slide02.jpg",
         "title": "Journal of Poverty and Social Justice",
         "category":"recently",
+        "subjects":"Accounting",
         "author": {
             "name": "Diana Skelton",
             "position": "Universitat Pompeu Fabra, Spain"
@@ -13,6 +14,7 @@
         "image": "https://i.ibb.co/7nzrGzT/slide03.jpg",
         "title": "Families, Relationships and Societies",
         "category":"recently",
+        "subjects":"Agriculture",
         "author": {
             "name": "Charlotte Faircloth",
             "position": "University College London, UK"
@@ -23,6 +25,7 @@
         "image": "https://i.ibb.co/ss04gDs/slide04.jpg",
         "title": "Critical and Radical Social Work",
         "category":"recently",
+        "subjects":"Archaeology",
         "author": {
             "name": "Nicki Blundell",
             "position": "Liverpool Hope University, UK"
@@ -33,6 +36,7 @@
         "image": "https://i.ibb.co/6mrhqBG/slide01.jpg",
         "title": "European Journal of Politics and Gender",
         "category":"recently",
+        "subjects":"Art and Art History",
         "author": {
             "name": "Stuart J Turnbull-Dugarte",
             "position": "University of Southampton, UK"
@@ -44,6 +48,7 @@
         "image": "https://i.ibb.co/7RLGhhv/coverimage-9.webp",
         "title": "Journal of Poverty and Social Justice",
         "category":"recently",
+        "subjects":"Bank Management",
         "author": {
             "name": "Diana Skelton",
             "position": "Universitat Pompeu Fabra, Spain"
@@ -54,6 +59,7 @@
         "image": "https://i.ibb.co/PgNs0Rr/coverimage-1.webp",
         "title": "Childhoods of the Global South",
         "category":"trending",
+        "subjects":"Biochemistry",
         "author": {
             "name": "Manfred Liebel,",
             "position": "University College London, UK"
@@ -64,6 +70,7 @@
         "image": "https://i.ibb.co/6wDrvR7/coverimage-2.webp",
         "title": "Poverty and Prejudice",
         "category":"trending",
+        "subjects":"Business Ethics",
         "author": {
             "name": "Kathryn Cheeseman",
             "position": "Liverpool Hope University, UK"
@@ -74,6 +81,7 @@
         "image": "https://i.ibb.co/bzjVwSC/coverimage-3.webp",
         "title": "A Realist Philosophy of Economics",
         "category":"trending",
+        "subjects":"Chemistry",
         "author": {
             "name": "Karl Mittermaier",
             "position": "University of Southampton, UK"
@@ -85,6 +93,7 @@
         "image": "https://i.ibb.co/D5QckwR/coverimage-4.webp",
         "title": "Troubled Pasts in Europe",
         "category":"trending",
+        "subjects":"Computer Science",
         "author": {
             "name": "Kenneth Andresen",
             "position": "Universitat Pompeu Fabra, Spain"
@@ -95,6 +104,7 @@
         "image": "https://i.ibb.co/hHyvXmB/coverimage-6.webp",
         "title": "Thinking Through Family",
         "category":"trending",
+        "subjects":"Criminal Justice",
         "author": {
             "name": "Bella Wheeler",
             "position": "University College London, UK"
@@ -105,6 +115,7 @@
         "image": "https://i.ibb.co/Q6KX9YT/coverimage-8.webp",
         "title": "Science and Democracy",
         "category":"popular",
+        "subjects":"Development Studies",
         "author": {
             "name": "Göran Sundqvist",
             "position": "Liverpool Hope University, UK"
@@ -115,6 +126,7 @@
         "image": "https://i.ibb.co/7RLGhhv/coverimage-9.webp",
         "title": "Reproduction, Kin and Climate Crisis",
         "category":"popular",
+        "subjects":"Earth Sciences",
         "author": {
             "name": "Rebecca Williamson",
             "position": "University of Southampton, UK"
@@ -126,6 +138,7 @@
         "image": "https://i.ibb.co/f4SQ347/coverimage-10.webp",
         "title": "The Practice of Collective Escape",
         "category":"popular",
+        "subjects":"Education",
         "author": {
             "name": "Helen Traill",
             "position": "Universitat Pompeu Fabra, Spain"
@@ -136,6 +149,73 @@
         "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
         "title": "Games in the Platform Economy",
         "category":"popular",
+        "subjects":"Entrepreneurship",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"Finance",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"Foreign Policy",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"Geography",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"HRM",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"History",
+        "author": {
+            "name": "Mette Thorhauge",
+            "position": "University College London, UK"
+        },
+        "description": "Families, Relationships and Societies (FRS) is a vibrant social science journal advancing scholarship and debates in the field of families and relationships.  It explores family life, relationships and generational issues across the life course. Bringing together a range of social science perspectives, with a strong policy and  practice focus, it is also strongly informed by sociological theory and the latest  methodological approaches. The title encompasses the fluidity, complexity and  diversity of contemporary social and personal relationships and their need to be understood in the context of different societies and cultures"
+    },
+    {
+        "image": "https://i.ibb.co/ydmWKY2/coverimage-11.webp",
+        "title": "Games in the Platform Economy",
+        "category":"popular",
+        "subjects":"Human Rights",
         "author": {
             "name": "Mette Thorhauge",
             "position": "University College London, UK"
@@ -146,6 +226,7 @@
         "image": "https://i.ibb.co/Qb7X7sD/coverimage-13.webp",
         "title": "Gendering Green Criminology",
         "category":"popular",
+        "subjects":"Information Technology",
         "author": {
             "name": "James Heydon",
             "position": "Liverpool Hope University, UK"
