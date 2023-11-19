@@ -2,7 +2,7 @@ import './Card.css'
 const Card = ({jounral}) => {
     const {image,title,description,author} = jounral
     return (
-        <div className="group cursor-pointer relative gap-2">
+        <div className="group cursor-pointer relative mx-2">
                <div className="overflow-hidden w-full"><img className="w-full overflow-hidden group-hover:scale-105 duration-300" src={image} alt="" /></div>
                <div className="bg-[#262626] top-0 absolute">
                    <h2 className="text-base text-[#115680] font-medium">{title}</h2>
