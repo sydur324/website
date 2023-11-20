@@ -12,6 +12,21 @@ const JournalsBody = () => {
     const [journals] = useJournals()
     const [view, setView] = useState(false)
 
+    // ---for searchbar--
+
+    const [query, setQuery] = useState("");
+
+    const handleInputChange = (event) => {
+        setQuery(event.target.value)
+        
+    };
+
+    const journal = journals.filter(
+        (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    );
+
+    //end search
+
     const [currentPage, setCurrentPage] = useState(1)
     const [limit, setLimite] = useState(8)
     const [pageNumberlimit, setPageNumberlimit] = useState(5)
@@ -44,7 +59,7 @@ const JournalsBody = () => {
 
     const indexOfLastItem = currentPage * limit;
     const indexOfFirstItem = indexOfLastItem - limit;
-    const currentItems = journals.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = journal.slice(indexOfFirstItem, indexOfLastItem);
 
 
 
@@ -83,21 +98,13 @@ const JournalsBody = () => {
 
     //for search input 
 
-    const [query, setQuery] = useState("");
 
-    const handleInputChange = (event) => {
-        setQuery(event.target.value);
-    };
-
-    const filteredItems = journals.filter(
-        (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-    );
 
     return (
         <div className="w-full px-8">
             <div className="flex items-center justify-between">
                 <div>
-                    <h2 className="font-medium text-[#115680]">Total Journals 01-{journals.length}</h2>
+                    <h2 className="font-medium text-[#115680]">Total Journals 01-{journal.length}</h2>
                 </div>
 
                 <div className="flex items-center lg:mr-12 gap-2">
@@ -153,7 +160,7 @@ const JournalsBody = () => {
                 {renderPageNumber}
                 {pagesIncrementBtn}
                 <li className="">
-                    <button className="px-1 py-1" onClick={handleNexBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}><MdChevronRight/></button>
+                    <button className="px-1 py-1" onClick={handleNexBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}><MdChevronRight /></button>
                 </li>
             </div>
         </div>

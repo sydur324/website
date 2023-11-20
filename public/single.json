@@ -1,0 +1,43 @@
+[
+    {
+        "id":1,
+        "image":"https://i.ibb.co/6mrhqBG/slide01.jpg",
+        "title":"International Journal of Humanities and Social Science",
+        "issnP":"2334 - 2404",
+        "issnE":"2334 - 2412",
+        "frequency":"Semi-annually",
+        "Nature":"Print and Online",
+        "email":"editor@aripd.net",
+        "Language":"English",
+        "decription":"International Journal of Humanities and Social Science (IJHSS) is an open access, peer-reviewed and refereed journal published by Center for Promoting Ideas (CPI), USA. The main objective of IJHSS is to provide an intellectual platform for the international scholars. IJHSS aims to promote interdisciplinary studies in humanities and social science and become the leading journal in humanities and social science in the world.",
+        "ePublication":"",
+        "editorialBoard":[
+            {
+                "editor":"Dr. Ismatul Hidayah",
+                "poforion":"Ministry of Agriculture, Indonesian Agency for Agricultural Research and Development (IAARD)"
+            },
+            {
+                "editor":"Dr. Vatcharee Seechamnanturakit",
+                "poforion":"Faculty of Agro-Industry, Prince of Songkla University, Thailand."
+            },
+            {
+                "editor":"Dai Lizhu",
+                "poforion":"Dept. of Geography, Hong Kong Baptist University, China."
+            },
+            {
+                "editor":"Isara Chaorakam, PhD",
+                "poforion":"Dept. of Environmental Studies and Community Development, Kenyatta University, Kenya."
+            },
+            {
+                "editor":"Dr. Martin Kajokare Loboka",
+                "poforion":"Department of Environmental Studies, University of Juba, Sudan."
+            }
+        ],
+        "submissionDeadline":"November 30, 2023",
+        "publicationDate":"December 31, 2023 ",
+        "papers":"International Journal of Humanities and Social Science (IJHSS)",
+        "shortTitle":"IJHSS"
+
+
+    }
+]
