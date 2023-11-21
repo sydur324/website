@@ -1,10 +1,13 @@
 import { useState } from "react";
 import './DetailsTab.css'
 import { IoIosCheckboxOutline } from "react-icons/io";
+import JournalArchive from "../JournalArchive/JournalArchive";
+import CurrentJournal from "../CurrentJournal/CurrentJournal";
+import AboutWEG from "../AboutWEG/AboutWEG";
 
 const DetailsTab = ({ item }) => {
 
-    const { title, decription, editorialBoard, papers, shortTitle } = item
+    const { title, decription, editorialBoard,advisarBoard, papers, shortTitle, archives, currentArticles } = item
 
     const [toggle, setToggle] = useState(1)
     const toggleTab = (index) => {
@@ -64,7 +67,7 @@ const DetailsTab = ({ item }) => {
                 <button
                     onClick={() => toggleTab(5)}
                     className={toggle === 5 ? "tabs active-tabs px-4 py-2" : "px-4 py-2  tabs"}
-                >WEG</button>
+                >CPI</button>
 
                 <button
                     onClick={() => toggleTab(6)}
@@ -74,7 +77,8 @@ const DetailsTab = ({ item }) => {
                 <button
                     onClick={() => toggleTab(7)}
                     className={toggle === 7 ? "tabs active-tabs px-4 py-2" : "px-4 py-2  tabs"}
-                >Archive</button>
+                >Archive
+                </button>
 
                 <button
                     onClick={() => toggleTab(8)}
@@ -119,15 +123,36 @@ const DetailsTab = ({ item }) => {
                 </div>
 
                 <div className={toggle === 3 ? "content active-content" : "content"}>
-                    <h2>this is third part</h2>
+                    <div className="border my-4 py-4 px-4">
+                        <h2 className="font-bold">International Advisory Board</h2>
+
+                        <div className="py-4">
+                            <div>
+                                {
+                                    advisarBoard.map((editor, index) => <div key={index}>
+                                        <div>
+                                            <div>
+                                                <p>Editor:</p>
+                                                <h2>{editor.editor}</h2>
+                                            </div>
+                                            <div>
+                                                <p>Desganition:</p>
+                                                <h2>{editor.poforion}</h2>
+                                            </div>
+                                        </div>
+                                    </div>)
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={toggle === 4 ? "content active-content" : "content"}>
-                    <h2>this is fourt part</h2>
+                    <CurrentJournal currentArticles={currentArticles}></CurrentJournal>
                 </div>
 
                 <div className={toggle === 5 ? "content active-content" : "content"}>
-                    <h2>five</h2>
+                    <AboutWEG></AboutWEG>
                 </div>
                 <div className={toggle === 6 ? "content active-content" : "content"}>
                     <div className="border my-4 py-4 px-4">
@@ -186,7 +211,7 @@ const DetailsTab = ({ item }) => {
                 </div>
 
                 <div className={toggle === 7 ? "content active-content" : "content"}>
-                    <h2>7</h2>
+                    <JournalArchive archives={archives}></JournalArchive>
                 </div>
 
                 <div className={toggle === 8 ? "content active-content" : "content"}>

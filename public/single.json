@@ -1,43 +1,247 @@
 [
     {
-        "id":1,
-        "image":"https://i.ibb.co/6mrhqBG/slide01.jpg",
-        "title":"International Journal of Humanities and Social Science",
-        "issnP":"2334 - 2404",
-        "issnE":"2334 - 2412",
-        "frequency":"Semi-annually",
-        "Nature":"Print and Online",
-        "email":"editor@aripd.net",
-        "Language":"English",
-        "decription":"International Journal of Humanities and Social Science (IJHSS) is an open access, peer-reviewed and refereed journal published by Center for Promoting Ideas (CPI), USA. The main objective of IJHSS is to provide an intellectual platform for the international scholars. IJHSS aims to promote interdisciplinary studies in humanities and social science and become the leading journal in humanities and social science in the world.",
-        "ePublication":"",
-        "editorialBoard":[
+        "id": 1,
+        "image": "https://i.ibb.co/6mrhqBG/slide01.jpg",
+        "title": "International Journal of Humanities and Social Science",
+        "issnP": "2334 - 2404",
+        "issnE": "2334 - 2412",
+        "frequency": "Semi-annually",
+        "Nature": "Print and Online",
+        "email": "editor@aripd.net",
+        "Language": "English",
+        "decription": "International Journal of Humanities and Social Science (IJHSS) is an open access, peer-reviewed and refereed journal published by Center for Promoting Ideas (CPI), USA. The main objective of IJHSS is to provide an intellectual platform for the international scholars. IJHSS aims to promote interdisciplinary studies in humanities and social science and become the leading journal in humanities and social science in the world.",
+        "ePublication": "",
+        "editorialBoard": [
             {
-                "editor":"Dr. Ismatul Hidayah",
-                "poforion":"Ministry of Agriculture, Indonesian Agency for Agricultural Research and Development (IAARD)"
+                "editor": "Dr. Ismatul Hidayah",
+                "poforion": "Ministry of Agriculture, Indonesian Agency for Agricultural Research and Development (IAARD)"
             },
             {
-                "editor":"Dr. Vatcharee Seechamnanturakit",
-                "poforion":"Faculty of Agro-Industry, Prince of Songkla University, Thailand."
+                "editor": "Dr. Vatcharee Seechamnanturakit",
+                "poforion": "Faculty of Agro-Industry, Prince of Songkla University, Thailand."
             },
             {
-                "editor":"Dai Lizhu",
-                "poforion":"Dept. of Geography, Hong Kong Baptist University, China."
+                "editor": "Dai Lizhu",
+                "poforion": "Dept. of Geography, Hong Kong Baptist University, China."
             },
             {
-                "editor":"Isara Chaorakam, PhD",
-                "poforion":"Dept. of Environmental Studies and Community Development, Kenyatta University, Kenya."
+                "editor": "Isara Chaorakam, PhD",
+                "poforion": "Dept. of Environmental Studies and Community Development, Kenyatta University, Kenya."
             },
             {
-                "editor":"Dr. Martin Kajokare Loboka",
-                "poforion":"Department of Environmental Studies, University of Juba, Sudan."
+                "editor": "Dr. Martin Kajokare Loboka",
+                "poforion": "Department of Environmental Studies, University of Juba, Sudan."
             }
         ],
-        "submissionDeadline":"November 30, 2023",
-        "publicationDate":"December 31, 2023 ",
-        "papers":"International Journal of Humanities and Social Science (IJHSS)",
-        "shortTitle":"IJHSS"
 
-
+        "advisarBoard": [
+            {
+                "editor": "Beverly Kracher",
+                "poforion": "Ministry of Agriculture, Indonesian Agency for Agricultural Research and Development (IAARD)"
+            },
+            {
+                "editor": "Caleb C. Okumu",
+                "poforion": "Faculty of Agro-Industry, Prince of Songkla University, Thailand."
+            },
+            {
+                "editor": "Chris Patel",
+                "poforion": "Dept. of Geography, Hong Kong Baptist University, China."
+            },
+            {
+                "editor": "Dr. Helen Mallette",
+                "poforion": "Dept. of Environmental Studies and Community Development, Kenyatta University, Kenya."
+            },
+            {
+                "editor": "Jean – Paul Van Belle",
+                "poforion": "Department of Environmental Studies, University of Juba, Sudan."
+            }
+        ],
+        "submissionDeadline": "November 30, 2023",
+        "publicationDate": "December 31, 2023 ",
+        "papers": "International Journal of Humanities and Social Science (IJHSS)",
+        "shortTitle": "IJHSS",
+        "archives": [
+            {
+                "year": "2023",
+                "volum": [
+                    {
+                        "volNum": "1",
+                        "volSerial": "1",
+                        "volDate": "Augst 2023",
+                        "article": [
+                            {
+                                "title": "Redesigning Principles of Accounting to Improve Students’ Performance and Retention",
+                                "writter": "Symon Manyara",
+                                "profetion": "Enoch Osei, Bernard McNeal, Augustin Ntembe",
+                                "doi": "10.30845/ijbss.v14n2a1 ",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a1",
+                                "abstract": "Principles of Accounting I is a required course for all business majors in the College of Business at Bowie State University. The course had a high failure rate, which resulted in many students migrating to other majors in the university. This problem initiated a study to improve teaching and assessment techniques",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "The “Greening” Effect: How Tiny House Communities Shape Residents’ Attitudes and Behaviors toward Sustainability",
+                                "writter": "Severin Mangold",
+                                "profetion": "Hosuk Lee, Tony Zschau",
+                                "doi": "10.30845/ijbss.v14n2a2",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a2",
+                                "abstract": "Tiny houses have gained popularity around the world in the years following the 2007-2008 global financial crisis. Tiny houses have since been touted as solutions for issues as diverse as affordable housing, financial independence, homelessness and/or sustainability. To date, much of the academic literature",
+                                "pdf": ""
+                            }
+                        ]
+                    },
+                    {
+                        "volNum": "2",
+                        "volSerial": "2",
+                        "volDate": "June 2023",
+                        "article": [
+                            {
+                                "title": "Self-Consciousness and Clothing Behavior: Values, Interests and Attitudes",
+                                "writter": "Felix A",
+                                "profetion": "",
+                                "doi": "10.30845/ijbss.v14n1a1",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a1",
+                                "abstract": "The primary purpose of this study was to determine if attitudes toward conformity, clothing interests, and fashion opinion leadership influence mood, role-playing and self-image among graduate students in an urban university.",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "Mainstreaming Workplace Flexibility: Organizational Change in an Australian Construction Company",
+                                "writter": "Graeme Russell",
+                                "profetion": "Linda Haas, Caitriona Comerford, Naomi McGrath",
+                                "doi": "10.30845/ijbss.v14n1a2 ",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a2",
+                                "abstract": "Purpose. This case study evaluates the efforts of an Australian construction company that decided to mainstream flexible work options for all professional employees to promote employees' work-life integration. Approach. Stouten's model of organizational change is used to analyze how this company used work redesign to successfully create a flexible work culture and flexibility options for all employees.",
+                                "pdf": ""
+                            }
+                        ]
+                    },
+                    {
+                        "volNum": "3",
+                        "volSerial": "3",
+                        "volDate": "March 2023",
+                        "article": [
+                            {
+                                "title": "Validating Future-Ready Capability Requirements for Networks and Information Technology: A Case Study",
+                                "writter": "Jessica Reynolds",
+                                "profetion": "Marcus Bowles, Samrat Ghosh",
+                                "doi": "10.30845/ijbss.v14n1a3",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a3",
+                                "abstract": "Many businesses are struggling to attract and retain competent employees, which, in turn, has resulted in a skills gap in the workforce. This is because resumes and transcripts do not reflect the true potential of a prospective employee, making it challenging for employers to identify appropriate candidates.",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "Economy and Asymmetric Information: Mirrleesian Optimal Taxation as an Asymmetric Information Problem",
+                                "writter": "Dushko Josheski",
+                                "profetion": "Tatjana Boshkov, Aleksandra Zezova",
+                                "doi": "10.30845/ijbss.v14n2a2",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a2",
+                                "abstract": "Tiny houses have gained popularity around the world in the years following the 2007-2008 global financial crisis. Tiny houses have since been touted as solutions for issues as diverse as affordable housing, financial independence, homelessness and/or sustainability. To date, much of the academic literature",
+                                "pdf": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "year": "2022",
+                "volum": [
+                    {
+                        "volNum": "1",
+                        "volSerial": "1",
+                        "volDate": "Augst 2023",
+                        "article": [
+                            {
+                                "title": "ppppp",
+                                "writter": "Symon Manyara",
+                                "profetion": "Enoch Osei, Bernard McNeal, Augustin Ntembe",
+                                "doi": "10.30845/ijbss.v14n2a1 ",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a1",
+                                "abstract": "Principles of Accounting I is a required course for all business majors in the College of Business at Bowie State University. The course had a high failure rate, which resulted in many students migrating to other majors in the university. This problem initiated a study to improve teaching and assessment techniques",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "fff",
+                                "writter": "Severin Mangold",
+                                "profetion": "Hosuk Lee, Tony Zschau",
+                                "doi": "10.30845/ijbss.v14n2a2",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a2",
+                                "abstract": "Tiny houses have gained popularity around the world in the years following the 2007-2008 global financial crisis. Tiny houses have since been touted as solutions for issues as diverse as affordable housing, financial independence, homelessness and/or sustainability. To date, much of the academic literature",
+                                "pdf": ""
+                            }
+                        ]
+                    },
+                    {
+                        "volNum": "2",
+                        "volSerial": "2",
+                        "volDate": "June 2023",
+                        "article": [
+                            {
+                                "title": "mmm",
+                                "writter": "Felix A",
+                                "profetion": "",
+                                "doi": "10.30845/ijbss.v14n1a1",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a1",
+                                "abstract": "The primary purpose of this study was to determine if attitudes toward conformity, clothing interests, and fashion opinion leadership influence mood, role-playing and self-image among graduate students in an urban university.",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "ccc",
+                                "writter": "Graeme Russell",
+                                "profetion": "Linda Haas, Caitriona Comerford, Naomi McGrath",
+                                "doi": "10.30845/ijbss.v14n1a2 ",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a2",
+                                "abstract": "Purpose. This case study evaluates the efforts of an Australian construction company that decided to mainstream flexible work options for all professional employees to promote employees' work-life integration. Approach. Stouten's model of organizational change is used to analyze how this company used work redesign to successfully create a flexible work culture and flexibility options for all employees.",
+                                "pdf": ""
+                            }
+                        ]
+                    },
+                    {
+                        "volNum": "3",
+                        "volSerial": "3",
+                        "volDate": "March 2023",
+                        "article": [
+                            {
+                                "title": "ddd",
+                                "writter": "Jessica Reynolds",
+                                "profetion": "Marcus Bowles, Samrat Ghosh",
+                                "doi": "10.30845/ijbss.v14n1a3",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n1a3",
+                                "abstract": "Many businesses are struggling to attract and retain competent employees, which, in turn, has resulted in a skills gap in the workforce. This is because resumes and transcripts do not reflect the true potential of a prospective employee, making it challenging for employers to identify appropriate candidates.",
+                                "pdf": ""
+                            },
+                            {
+                                "title": "kkk",
+                                "writter": "Dushko Josheski",
+                                "profetion": "Tatjana Boshkov, Aleksandra Zezova",
+                                "doi": "10.30845/ijbss.v14n2a2",
+                                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a2",
+                                "abstract": "Tiny houses have gained popularity around the world in the years following the 2007-2008 global financial crisis. Tiny houses have since been touted as solutions for issues as diverse as affordable housing, financial independence, homelessness and/or sustainability. To date, much of the academic literature",
+                                "pdf": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "currentArticles": [
+            {
+                "title": "Redesigning Principles of Accounting to Improve Students’ Performance and Retention",
+                "writter": "Symon Manyara",
+                "profetion": "Enoch Osei, Bernard McNeal, Augustin Ntembe",
+                "doi": "10.30845/ijbss.v14n2a1 ",
+                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a1",
+                "abstract": "Principles of Accounting I is a required course for all business majors in the College of Business at Bowie State University. The course had a high failure rate, which resulted in many students migrating to other majors in the university. This problem initiated a study to improve teaching and assessment techniques",
+                "pdf": ""
+            },
+            {
+                "title": "The “Greening” Effect: How Tiny House Communities Shape Residents’ Attitudes and Behaviors toward Sustainability",
+                "writter": "Severin Mangold",
+                "profetion": "Hosuk Lee, Tony Zschau",
+                "doi": "10.30845/ijbss.v14n2a2",
+                "url": "http://dx.doi.org/10.30845/ijbss.v14n2a2",
+                "abstract": "Tiny houses have gained popularity around the world in the years following the 2007-2008 global financial crisis. Tiny houses have since been touted as solutions for issues as diverse as affordable housing, financial independence, homelessness and/or sustainability. To date, much of the academic literature",
+                "pdf": ""
+            }
+        ]
+        
     }
 ]
