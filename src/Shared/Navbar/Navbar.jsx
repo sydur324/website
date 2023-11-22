@@ -3,7 +3,6 @@ import { CiSearch } from 'react-icons/ci';
 import { HiOutlineMenu } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
-import SearchBar from '../../Utilis/SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 
 
@@ -11,10 +10,14 @@ const Navbar = () => {
     const navLink = [
         { id: 1, name: "Home", to: "/" },
         { id: 2, name: "Journals", to: "journals" },
-        { id: 3, name: "Publish", to: "" },
+        { id: 3, name: "Education", to: "" },
         { id: 4, name: "Research", to: "" },
-        { id: 5, name: "About", to: "" },
+        { id: 5, name: "Training", to: "" },
+        { id: 5, name: "Seminar", to: "" },
+        { id: 5, name: "Career", to: "" },
+        { id: 5, name: "Global Team", to: "" },
         { id: 6, name: "Blogs", to: "" },
+        { id: 6, name: "Contact", to: "" },
     ]
 
     const [isOpen, setIsOpen] = useState(false)
@@ -91,13 +94,13 @@ const Navbar = () => {
                     <div className={`xl:px-20 lg:px-16 z-50 md:px-14 sm:px-12 px-12  bg-[#E5E5E5] hidden lg:block  w-full duration-300 ${changeColor ? " duration-300 bg-[#E5E5E5] z-50 shadow-md" : ""}`}>
 
                         <div className='flex items-center justify-between'>
-                            <div className='flex space-x-8'>
+                            <div className='flex space-x-4'>
                                 {
                                     navLink.map(nav => <li className='list-none flex' key={nav.id}>
 
                                         <Link to={nav.to}>
                                             <p className='flex items-center space-x-1 font-medium hover:text-[#005581] duration-300 cursor-pointer'>
-                                                <span>{nav.name}</span><span className='text-[#005581] font-bold text-lg'>+</span>
+                                                <span>{nav.name}</span>
                                             </p>
                                         </Link>
 
@@ -106,7 +109,7 @@ const Navbar = () => {
                             </div>
 
                             <div className='flex items-center justify-center space-x-6'>
-                                <p onClick={sHandle} className='text-2xl cursor-pointer'><CiSearch></CiSearch></p>
+                                
                                 <div className='h-full  bg-[#F96E54] px-6 py-5 text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
                                     <button className=''>Published Your Journals</button>
                                 </div>
@@ -160,11 +163,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <div>
-                {
-                    sToggle ? <><SearchBar></SearchBar> </> : <></>
-                }
-            </div>
+            
         </div>
     );
 };

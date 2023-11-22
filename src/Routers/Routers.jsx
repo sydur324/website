@@ -8,6 +8,9 @@ import JournalLayout from "../Layout/JournalLayout";
 import EditorialBoard from "../Pages/JournalsDetails/JournalFixedContent/EditorialBoard/EditorialBoard";
 import FaqPage from "../Pages/JournalsDetails/JournalFixedContent/FaqPage/FaqPage";
 import JournalsDetailsHome from "../Pages/JournalsDetails/JournalsDetailsHome/JournalsDetailsHome";
+import JournalsPolice from "../Pages/JournalsDetails/JournalsPolice/JournalsPolice";
+import JournalIndex from "../Pages/JournalsDetails/JournalIndex/JournalIndex";
+import ContactPage from "../Pages/ContactPage/ContactPage";
 
 
   
@@ -39,8 +42,20 @@ export  const router = createBrowserRouter([
           element:<EditorialBoard></EditorialBoard>
         },
         {
+          path:"/journal/policy",
+          element:<JournalsPolice></JournalsPolice>
+        },
+        {
           path:"/journal/faqpage",
           element:<FaqPage></FaqPage>
+        },
+        {
+          path:"/journal/indexing",
+          element:<JournalIndex></JournalIndex>
+        },
+        {
+          path:"/journal/contact",
+          element:<ContactPage></ContactPage>
         },
       ]
     }

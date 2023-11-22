@@ -1,0 +1,19 @@
+.content{
+    display:none;
+}
+.active-content{
+    display:block;
+}
+
+.ptabs{
+    transition:0.5s;
+    font-size:14px;
+}
+.active-tabs.ptabs{
+    background-color:#F46957;
+    color:#fff;
+}
+
+.phead-tab{
+    position: relative;
+}
