@@ -11,6 +11,14 @@ import JournalsDetailsHome from "../Pages/JournalsDetails/JournalsDetailsHome/Jo
 import JournalsPolice from "../Pages/JournalsDetails/JournalsPolice/JournalsPolice";
 import JournalIndex from "../Pages/JournalsDetails/JournalIndex/JournalIndex";
 import ContactPage from "../Pages/ContactPage/ContactPage";
+import JournalsNews from "../Pages/JournalsDetails/JournalsNews/JournalsNews";
+import JournalSubscribe from "../Pages/JournalsDetails/JournalSubscribe/JournalSubscribe";
+import EducationPage from "../Pages/EducationPage/EducationPage";
+import ResearchPage from "../Pages/ResearchPage/ResearchPage";
+import ResearchDetails from "../Pages/ResearchPage/ResearchDetails/ResearchDetails";
+import TrainingPage from "../Pages/TrainingPage/TrainingPage";
+import TeamPage from "../Pages/TeamPage/TeamPage";
+import Login from "../LoginSystem/Login/Login";
 
 
   
@@ -26,6 +34,34 @@ export  const router = createBrowserRouter([
         {
           path:"/journals",
           element:<Journals></Journals>,
+        },
+        {
+          path:"/Education",
+          element:<EducationPage></EducationPage>,
+        },
+        {
+          path:"/research",
+          element:<ResearchPage></ResearchPage>
+        },
+        {
+          path:"/detailsRearch",
+          element:<ResearchDetails></ResearchDetails>
+        },
+        {
+          path:"/traingpage",
+          element:<TrainingPage></TrainingPage>
+        },
+        {
+          path:"/teamPage",
+          element:<TeamPage></TeamPage>
+        },
+        {
+          path:"/contact",
+          element:<ContactPage></ContactPage>
+        },
+        {
+          path:"/login",
+          element:<Login></Login>
         }
       ]
     },
@@ -57,6 +93,18 @@ export  const router = createBrowserRouter([
           path:"/journal/contact",
           element:<ContactPage></ContactPage>
         },
+        {
+          path:"/journal/news",
+          element:<JournalsNews></JournalsNews>
+        },
+        {
+          path:"/journal/subscribe",
+          element:<JournalSubscribe></JournalSubscribe>
+        },
+        {
+          path:"/journal/login",
+          element:<Login></Login>
+        }
       ]
     }
   ]);

@@ -1,0 +1,16 @@
+.research-bg{
+    background-image:url(../../assets/image/researchbg.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: relative;
+}
+.research-bg::before{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:#f5f5f582;
+    left:0;
+    top:0;
+    content:"";
+}

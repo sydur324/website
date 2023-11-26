@@ -9,10 +9,10 @@ const JournalNav = () => {
         { id: 1, name: "Home", to: "/journal" },
         { id: 2, name: "Journals", to: "/journals" },
         { id: 3, name: "Policies", to: "/journal/policy" },
-        { id: 4, name: "Subscription", to: "" },
+        { id: 4, name: "Subscription", to: "/journal/subscribe" },
         { id: 5, name: "FAQ", to: "/journal/faqpage" },
         { id: 6, name: "Index", to: "/journal/indexing" },
-        { id: 7, name: "News", to: "" },
+        { id: 7, name: "News", to: "/journal/news" },
         { id: 8, name: "Contact", to: "/journal/contact" },
     ]
 
@@ -57,7 +57,9 @@ const JournalNav = () => {
 
                     <div className='lg:flex hidden items-center justify-center space-x-4 cursor-pointer text-sm font-medium text-[#4d4c4c]'>
                         <p>Customer Services</p>
-                        <p>Log In</p>
+                        <Link to="/journal/login">
+                            <p>Log In</p>
+                        </Link>
                         <p> Register</p>
                         <p>Institutional Access</p>
                     </div>

@@ -1,11 +1,18 @@
 const FaqPage = () => {
     return (
-        <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8">
-            <div>
-                <h2 className="text-xl font-medium">FAQ For Published Your Journals</h2>
+        <div >
+            
+            <div className='bg-[#f4695721] my-8 xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8'>
+                <h2 className='text-2xl font-bold'>FAQ For Published Journals</h2>
+                <p className='py-2 font-medium text-[#4b4b4b]'>
+                    Wherever & whenever you need us. We are here for
+                    you  <br></br> contact us for
+                    all your support needs
+                    be it technical, general queries or information support.
+                </p>
             </div>
 
-            <div className="py-8">
+            <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8">
                 <div className="join join-vertical w-full">
                     <div className="collapse collapse-arrow join-item">
                         <input type="radio" name="my-accordion-4" checked="checked" />
@@ -293,10 +300,10 @@ const FaqPage = () => {
                             When I will get the acceptance letter, if my paper is accepted?
                         </div>
                         <div className="collapse-content bg-[#26262615] my-3">
-                            <p className="py-4 leading-6">Acceptance letter is provided 
-                            just after the confirmation of receiving the publication fee
-                             from the author(s).
-                             It takes maximum 24 hours.
+                            <p className="py-4 leading-6">Acceptance letter is provided
+                                just after the confirmation of receiving the publication fee
+                                from the author(s).
+                                It takes maximum 24 hours.
                             </p>
                         </div>
                     </div>

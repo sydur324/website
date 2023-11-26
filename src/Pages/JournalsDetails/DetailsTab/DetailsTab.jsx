@@ -41,7 +41,7 @@ const DetailsTab = ({ item }) => {
 
     return (
         <div className="">
-            <div className="flex head-tab border">
+            <div className="flex flex-wrap head-tab border">
                 <button
                     onClick={() => toggleTab(1)}
                     className={toggle === 1 ? "tabs active-tabs px-4 py-2" : "px-4 py-2  tabs"}

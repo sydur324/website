@@ -10,14 +10,11 @@ const Navbar = () => {
     const navLink = [
         { id: 1, name: "Home", to: "/" },
         { id: 2, name: "Journals", to: "journals" },
-        { id: 3, name: "Education", to: "" },
-        { id: 4, name: "Research", to: "" },
-        { id: 5, name: "Training", to: "" },
-        { id: 5, name: "Seminar", to: "" },
-        { id: 5, name: "Career", to: "" },
-        { id: 5, name: "Global Team", to: "" },
-        { id: 6, name: "Blogs", to: "" },
-        { id: 6, name: "Contact", to: "" },
+        { id: 3, name: "Education", to: "Education" },
+        { id: 4, name: "Research", to: "research" },
+        { id: 5, name: "Training", to: "traingpage" },
+        { id: 6, name: "Global Team", to: "teamPage" },
+        { id: 7, name: "Contact", to: "contact" },
     ]
 
     const [isOpen, setIsOpen] = useState(false)
@@ -69,7 +66,9 @@ const Navbar = () => {
 
                         <div className='lg:flex hidden items-center justify-center space-x-4 cursor-pointer text-sm font-medium text-[#4d4c4c]'>
                             <p>Customer Services</p>
-                            <p>Log In</p>
+                            <Link to="/login">
+                                <p>Log In</p>
+                            </Link>
                             <p> Register</p>
                             <p>Institutional Access</p>
                         </div>
@@ -109,7 +108,7 @@ const Navbar = () => {
                             </div>
 
                             <div className='flex items-center justify-center space-x-6'>
-                                
+
                                 <div className='h-full  bg-[#F96E54] px-6 py-5 text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
                                     <button className=''>Published Your Journals</button>
                                 </div>
@@ -122,7 +121,7 @@ const Navbar = () => {
             </div>
 
             {/* --small-device-- */}
-            <div className={`lg:hidden fixed top-0 duration-300 z-10 left-0 w-[100%] 
+            <div className={`lg:hidden fixed top-0 duration-300 z-50 left-0 w-[100%] 
             h-screen bg-[#000000c7] ${isOpen ? "left-0" : "left-[-100%]"}`}>
                 <div className='w-[60%] h-screen bg-[#E5E5E5]'>
                     <div className='bg-[#fff] xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8 flex items-center justify-between'>
@@ -163,7 +162,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-            
+
         </div>
     );
 };

@@ -1,0 +1,76 @@
+[
+    {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "email": "john.doe@example.com",
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "twitter": "https://twitter.com/johndoe",
+          "github": "https://github.com/johndoe",
+          "instagram": "https://www.instagram.com/johndoe",
+          "facebook": "https://www.facebook.com/johndoe"
+        },
+        "description": "Experienced software engineer with a passion for creating innovative solutions Experienced software engineer with a passion for creating innovative solutions Experienced software engineer with a passion for creating innovative solutions.",
+        "image": "https://i.ibb.co/JmLLTS6/staff-3-255x277.jpg"
+      },
+
+      {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "email": "john.doe@example.com",
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "twitter": "https://twitter.com/johndoe",
+          "github": "https://github.com/johndoe",
+          "instagram": "https://www.instagram.com/johndoe",
+          "facebook": "https://www.facebook.com/johndoe"
+        },
+        "description": "Experienced software engineer with a passion for creating innovative solutions.",
+        "image": "https://i.ibb.co/TYqrQ6g/staff-2-255x277.jpg"
+      },
+
+      {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "email": "john.doe@example.com",
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "twitter": "https://twitter.com/johndoe",
+          "github": "https://github.com/johndoe",
+          "instagram": "https://www.instagram.com/johndoe",
+          "facebook": "https://www.facebook.com/johndoe"
+        },
+        "description": "Experienced software engineer with a passion for creating innovative solutions.",
+        "image": "https://i.ibb.co/v40DHfV/staff-1-255x277.jpg"
+      },
+
+      {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "email": "john.doe@example.com",
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "twitter": "https://twitter.com/johndoe",
+          "github": "https://github.com/johndoe",
+          "instagram": "https://www.instagram.com/johndoe",
+          "facebook": "https://www.facebook.com/johndoe"
+        },
+        "description": "Experienced software engineer with a passion for creating innovative solutions.",
+        "image": "https://i.ibb.co/XFJWcTd/contact-2-255x277.jpg"
+      },
+
+      {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "email": "john.doe@example.com",
+        "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/johndoe",
+          "twitter": "https://twitter.com/johndoe",
+          "github": "https://github.com/johndoe",
+          "instagram": "https://www.instagram.com/johndoe",
+          "facebook": "https://www.facebook.com/johndoe"
+        },
+        "description": "Experienced software engineer with a passion for creating innovative solutions.",
+        "image": "https://i.ibb.co/cgMwMWd/contact-1-255x277.jpg"
+      }
+]

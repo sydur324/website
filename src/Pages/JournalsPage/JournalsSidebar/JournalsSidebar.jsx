@@ -1,17 +1,30 @@
-import SideSub from "./SideSub/SideSub";
+import useJournals from "../../../Hooks/useJournals";
 
-const JournalsSidebar = () => {
-    
+
+const JournalsSidebar = ({ subList, filterSub, setJournals }) => {
+    const [journalls] = useJournals()
     return (
-        <div className="">
-            <div className="bg-[#E5E5E5] w-[55vh] px-20 py-6">
-               <h2 className="text-base font-bold text-[#115680]">
-                Journals by Subjects
+        <div className="lg:w-1/4 hidden lg:block">
+            <div className="bg-[#E5E5E5]  px-20 py-6">
+                <h2 className="text-base font-bold text-[#115680]">
+                    Journals by Subjects
                 </h2>
                 <div>
-                      <SideSub></SideSub>
+                    <div className="space-y-2 py-4 cursor-pointer flex flex-col text-lg font-medium">
+                        <button className="text-left" onClick={() => setJournals(journalls)}>
+                            All
+                        </button>
+                        {
+                            subList.map((sub, index) => (
+                                <button className="text-left" onClick={() => filterSub(sub)} key={index}>
+                                    {sub}
+                                </button>
+                            ))
+
+                        }
+                    </div>
                 </div>
-        </div>
+            </div>
         </div>
     );
 };

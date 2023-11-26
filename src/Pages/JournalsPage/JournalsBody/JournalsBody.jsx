@@ -1,4 +1,4 @@
-import useJournals from "../../../Hooks/useJournals";
+
 import './JournalsBody.css';
 import { IoSearchOutline } from "react-icons/io5";
 import { MdGridView } from "react-icons/md";
@@ -8,8 +8,8 @@ import { MdChevronRight } from "react-icons/md";
 import Card from "../../../Utilis/JournalCard/Card";
 import ListCard from "../../../Utilis/JournalCard/ListCard/ListCard";
 import { useState } from "react";
-const JournalsBody = () => {
-    const [journals] = useJournals()
+const JournalsBody = ({ journals }) => {
+    //const [journals] = useJournals()
     const [view, setView] = useState(false)
 
     // ---for searchbar--
@@ -18,7 +18,7 @@ const JournalsBody = () => {
 
     const handleInputChange = (event) => {
         setQuery(event.target.value)
-        
+
     };
 
     const journal = journals.filter(
@@ -47,7 +47,7 @@ const JournalsBody = () => {
                 <li key={number} id={number} onClick={handleClick}
                     className={currentPage == number ? "active" : null}
                 >
-                    {number}
+                    <span className='px-2'>{number}</span>
                 </li>
             )
         }
@@ -102,32 +102,32 @@ const JournalsBody = () => {
 
     return (
         <div className="w-full px-8">
-            <div className="flex items-center justify-between">
-                <div>
-                    <h2 className="font-medium text-[#115680]">Total Journals 01-{journal.length}</h2>
-                </div>
-
-                <div className="flex items-center lg:mr-12 gap-2">
-                    <div className="border flex ">
+            <div className="flex  items-center justify-between">
+                <div className="lg:flex px-2  w-full lg:items-center lg:mr-12 gap-2">
+                    <div className="border flex w-full">
                         <input onChange={handleInputChange}
-                            value={query} className="outline-none px-4" type="text" placeholder="Find Journals" />
+                            value={query} className="outline-none  w-full px-4" type="text" placeholder="Find Journals" />
                         <button className="text-xl bg-[#115680] hover:bg-[#262626] duration-300 border border-[#115680]
                               text-white py-2 px-2 inline-block">
                             <IoSearchOutline />
                         </button>
                     </div>
                     <p onClick={() => setView(false)} className="text-xl py-2 px-2 border hover:bg-[#115680] hover:text-white
-                    duration-300 cursor-pointer">
+                    duration-300 hidden lg:block cursor-pointer">
                         <MdGridView />
                     </p>
                     <p onClick={() => setView(true)} className="text-xl py-2 px-2 border hover:bg-[#115680] hover:text-white
-                    duration-300 cursor-pointer">
+                    duration-300 hidden lg:block cursor-pointer">
                         <TfiMenuAlt />
                     </p>
                 </div>
             </div>
 
             <div>
+                <h2 className="font-bold  hidden mt-8 px-2  xl:block text-[#262626]">Total Journals 0-{journal.length}</h2>
+            </div>
+
+            <div className='pb-4'>
                 {
                     view === true ?
                         <>
@@ -141,7 +141,7 @@ const JournalsBody = () => {
                         </>
                         :
                         <>
-                            <div className="my-8 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
+                            <div className="my-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-2">
                                 {
                                     currentItems.map((jounral, index) => <Card key={jounral.index} jounral={jounral}>
 
@@ -152,16 +152,18 @@ const JournalsBody = () => {
                 }
             </div>
 
-            <div className='flex items-center space-x-2  list-none pageNumder cursor-pointer'>
-                <li>
-                    <button className="px-1 py-1" onClick={handlePrevBtn} disabled={currentPage == pages[0] ? true : false}><MdChevronLeft /></button>
-                </li>
-                {pagesDicrementBtn}
-                {renderPageNumber}
-                {pagesIncrementBtn}
-                <li className="">
-                    <button className="px-1 py-1" onClick={handleNexBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}><MdChevronRight /></button>
-                </li>
+            <div className='flex items-center justify-center mt-4'>
+                <div className='flex items-center space-x-2  list-none pageNumder cursor-pointer'>
+                    <li>
+                        <button className="px-1 py-1" onClick={handlePrevBtn} disabled={currentPage == pages[0] ? true : false}><MdChevronLeft /></button>
+                    </li>
+                    {pagesDicrementBtn}
+                    {renderPageNumber}
+                    {pagesIncrementBtn}
+                    <li className="">
+                        <button className="px-1 py-1" onClick={handleNexBtn} disabled={currentPage == pages[pages.length - 1] ? true : false}><MdChevronRight /></button>
+                    </li>
+                </div>
             </div>
         </div>
     );

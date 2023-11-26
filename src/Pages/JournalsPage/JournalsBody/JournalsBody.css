@@ -2,7 +2,6 @@
 .pageNumder li{
     background-color:#F46957;
     color:#fff;
-    padding:2px;
     transition:0.5s;
 }
 .pageNumder li:hover{
