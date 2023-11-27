@@ -2,7 +2,9 @@ ul li{
     position: relative;
     transition:0.5s;
     cursor: pointer;
+    transform:translateX(0px);
 }
 ul li:hover{
-    color: #28597D;
+    color: #F46957;
+    transform:translateX(8px);
 }

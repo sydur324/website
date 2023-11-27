@@ -57,7 +57,7 @@ const JournalNav = () => {
 
                     <div className='lg:flex hidden items-center justify-center space-x-4 cursor-pointer text-sm font-medium text-[#4d4c4c]'>
                         <p>Customer Services</p>
-                        <Link to="/journal/login">
+                        <Link to="/login">
                             <p>Log In</p>
                         </Link>
                         <p> Register</p>

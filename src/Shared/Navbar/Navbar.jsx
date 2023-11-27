@@ -2,8 +2,11 @@ import './Navbar.css'
 import { CiSearch } from 'react-icons/ci';
 import { HiOutlineMenu } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { IoMdLogOut } from "react-icons/io";
+import { MdOutlineAccountCircle } from "react-icons/md";
 
 
 const Navbar = () => {
@@ -51,6 +54,16 @@ const Navbar = () => {
         setSToggle(!sToggle)
         console.log('hellow')
     }
+
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user)
+    const handleLogout = () => {
+        logOut()
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+    }
     return (
 
         <div className='relative'>
@@ -66,9 +79,39 @@ const Navbar = () => {
 
                         <div className='lg:flex hidden items-center justify-center space-x-4 cursor-pointer text-sm font-medium text-[#4d4c4c]'>
                             <p>Customer Services</p>
-                            <Link to="/login">
-                                <p>Log In</p>
-                            </Link>
+                            <div>
+                                {
+                                    user ?
+                                        <>
+                                            <div className='dashboard'>
+                                                <div>
+                                                    <h2>{user?.email}</h2>
+                                                </div>
+
+                                                <div className='bg-[#1B577F] text-white duration-300 cursor-pointer px-8 py-4 absolute  z-10 mt-2 userDas rounded'>
+                                                    <div className='flex items-center space-x-1 group'>
+                                                        <p className='font-bold text-xl group-hover:text-[#F46957] duration-300 '><IoMdLogOut /></p>
+                                                        <h2 onClick={handleLogout} className='py-2 hover:text-[#F46957] duration-300 font-bold'>Log Out</h2>
+                                                    </div>
+                                                    <div className='flex items-center space-x-1 group'>
+                                                        <p className='font-bold text-xl group-hover:text-[#F46957] duration-300 '><MdOutlineAccountCircle /></p>
+                                                        <Link to='/userDashBoard'>
+                                                            <h2 className=' hover:text-[#F46957] duration-300 font-bold'>Your Account</h2>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                        :
+                                        <>
+                                            <Link to="/login">
+                                                <p>Log In</p>
+                                            </Link>
+                                        </>
+                                }
+
+                            </div>
+
                             <p> Register</p>
                             <p>Institutional Access</p>
                         </div>
@@ -93,24 +136,25 @@ const Navbar = () => {
                     <div className={`xl:px-20 lg:px-16 z-50 md:px-14 sm:px-12 px-12  bg-[#E5E5E5] hidden lg:block  w-full duration-300 ${changeColor ? " duration-300 bg-[#E5E5E5] z-50 shadow-md" : ""}`}>
 
                         <div className='flex items-center justify-between'>
-                            <div className='flex space-x-4'>
+                            <div className='flex space-x-1'>
                                 {
                                     navLink.map(nav => <li className='list-none flex' key={nav.id}>
 
-                                        <Link to={nav.to}>
-                                            <p className='flex items-center space-x-1 font-medium hover:text-[#005581] duration-300 cursor-pointer'>
+                                        <NavLink to={nav.to}>
+                                            <p className='flex items-center px-4 py-4 space-x-1 font-medium hover:bg-[#F46957] hover:text-white duration-300 cursor-pointer'>
                                                 <span>{nav.name}</span>
                                             </p>
-                                        </Link>
+                                        </NavLink>
 
                                     </li>)
                                 }
+
                             </div>
 
                             <div className='flex items-center justify-center space-x-6'>
 
-                                <div className='h-full  bg-[#F96E54] px-6 py-5 text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
-                                    <button className=''>Published Your Journals</button>
+                                <div className='h-full  bg-[#F96E54] px-6 py-4  text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
+                                    <button className=''>Submited Your Journals</button>
                                 </div>
                             </div>
                         </div>

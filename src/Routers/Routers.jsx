@@ -19,6 +19,10 @@ import ResearchDetails from "../Pages/ResearchPage/ResearchDetails/ResearchDetai
 import TrainingPage from "../Pages/TrainingPage/TrainingPage";
 import TeamPage from "../Pages/TeamPage/TeamPage";
 import Login from "../LoginSystem/Login/Login";
+import SingUp from "../LoginSystem/SingUp/SingUp";
+import UserLayout from "../Layout/UserLayout";
+import UserDashBoard from "../UserDashBoard/UserDashBoard";
+import SubmitJournals from "../AdminDashBoard/SubmitJournals/SubmitJournals";
 
 
   
@@ -59,10 +63,7 @@ export  const router = createBrowserRouter([
           path:"/contact",
           element:<ContactPage></ContactPage>
         },
-        {
-          path:"/login",
-          element:<Login></Login>
-        }
+        
       ]
     },
     {
@@ -100,11 +101,33 @@ export  const router = createBrowserRouter([
         {
           path:"/journal/subscribe",
           element:<JournalSubscribe></JournalSubscribe>
-        },
-        {
-          path:"/journal/login",
-          element:<Login></Login>
         }
-      ]
-    }
+        
+      ],
+
+     
+    },
+
+    {
+        path:"/userDashBoard",
+        element:<UserLayout></UserLayout>,
+        children:[
+          {
+            path:'/userDashBoard',
+            element:<UserDashBoard></UserDashBoard>
+          },
+          {
+            path:'/userDashBoard/submite',
+            element:<SubmitJournals></SubmitJournals>
+          }
+        ]
+    },
+    {
+      path:"/login",
+      element:<Login></Login>
+    },
+    {
+      path:"/signup",
+      element:<SingUp></SingUp>
+    },
   ]);

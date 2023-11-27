@@ -3,12 +3,12 @@ import './Footer.css'
 const Footer = () => {
 
     return (
-        <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8">
+        <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-8 bg-[#E5E5E5]">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
 
                 <div>
                     <h2 className="footer text-xl font-bold text-[#28597D] py-4">Journal Subjects</h2>
-                    <div className="lg:flex lg:space-x-6 text-[#6c6c6c] text-sm font-medium">
+                    <div className="lg:flex lg:space-x-6 text-[#6c6c6c] text-base font-medium">
 
                         <div className="">
                             <ul className="space-y-1">

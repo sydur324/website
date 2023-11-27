@@ -5,3 +5,9 @@
 *{
     font-family: 'Open Sans', sans-serif;
 }
+
+.active {
+    font-weight: bold;
+    background-color:#F46957;
+    color: #fff;
+  }
