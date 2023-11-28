@@ -23,6 +23,9 @@ import SingUp from "../LoginSystem/SingUp/SingUp";
 import UserLayout from "../Layout/UserLayout";
 import UserDashBoard from "../UserDashBoard/UserDashBoard";
 import SubmitJournals from "../AdminDashBoard/SubmitJournals/SubmitJournals";
+import YourArticle from "../UserDashBoard/YourArticle/YourArticle";
+import TermsAndCondition from "../UserDashBoard/TermsAndCondition/TermsAndCondition";
+import ArticleStutes from "../UserDashBoard/ArticleStutes/ArticleStutes";
 
 
   
@@ -119,6 +122,18 @@ export  const router = createBrowserRouter([
           {
             path:'/userDashBoard/submite',
             element:<SubmitJournals></SubmitJournals>
+          },
+          {
+            path:'/userDashBoard/trems&condition',
+            element:<TermsAndCondition></TermsAndCondition>
+          },
+          {
+            path:'/userDashBoard/yourarticle',
+            element:<YourArticle></YourArticle>
+          },
+          {
+            path:'/userDashBoard/ariticleStutes',
+            element:<ArticleStutes></ArticleStutes>
           }
         ]
     },

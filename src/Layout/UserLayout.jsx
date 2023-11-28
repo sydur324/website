@@ -4,7 +4,7 @@ import UserNav from "../UserDashBoard/UserNav/UserNav";
 
 const UserLayout = () => {
     return (
-        <div className="flex">
+        <div className="lg:flex">
             <TabScrollTop>
                 <UserNav></UserNav>
                 <Outlet></Outlet>

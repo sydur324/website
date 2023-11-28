@@ -4,7 +4,7 @@ import UserNav from "./UserNav/UserNav";
 const UserDashBoard = () => {
     
     return (
-        <div className="flex">
+        <div className="flex w-3/4">
                <UserHome></UserHome>
         </div>
     );

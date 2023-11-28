@@ -10,9 +10,9 @@ import { MdLogout } from "react-icons/md";
 const UserNav = () => {
     const userNavLink = [
         { id: 1, name: "User Home", to: "/userDashBoard", icon: <FaHome /> },
-        { id: 2, name: "Submit Article", to: "/userDashBoard/submite", icon: <RiFolderUploadFill /> },
-        { id: 2, name: "Your Article", to: "", icon: <MdArticle /> },
-        { id: 2, name: "Article Status", to: "", icon: <GiConvergenceTarget /> },
+        { id: 2, name: "Submit Article", to: "/userDashBoard/trems&condition", icon: <RiFolderUploadFill /> },
+        { id: 2, name: "Your Article", to: "/userDashBoard/yourarticle", icon: <MdArticle /> },
+        { id: 2, name: "Article Status", to: "/userDashBoard/ariticleStutes", icon: <GiConvergenceTarget /> },
         { id: 2, name: "Profile Setting", to: "", icon: <IoSettingsSharp /> },
     ]
 
@@ -23,7 +23,7 @@ const UserNav = () => {
     ]
 
     return (
-        <div className="bg-[#1B577F] w-1/5 h-screen relative">
+        <div className="bg-[#1B577F] lg:w-1/5 w-full lg:h-screen  relative">
 
             <div className="flex items-center justify-center flex-col text-center py-4 mt-4 border-b border-[#ffffff67]">
                 <div className="w-full flex items-center justify-center">
@@ -34,16 +34,18 @@ const UserNav = () => {
                     <p className="py-1 font-medium text-[#ffffffb8]">sydur324@gmail.com</p>
                 </div>
             </div>
-            <div className='py-6 '>
+            <div className='py-6'>
                 {
-                    userNavLink.map(nav => <li className='list-none hover:bg-[#F46957] border-b border-[#fffdfd45]' key={nav.id}>
+                    userNavLink.map(nav => <li className='list-none flex items-center lg:items-start justify-center flex-col hover:bg-[#F46957]  border-b border-[#fffdfd45]' key={nav.id}>
 
-                        <NavLink to={nav.to}>
-                            <p className="flex items-center  space-x-2 px-6 py-3  text-white">
-                                <span className="text-xl">{nav.icon}</span>
-                                <span>{nav.name}</span>
-                            </p>
-                        </NavLink>
+                        <Link to={nav.to}>
+                            <div className="">
+                                <p className="flex  items-center  space-x-2 px-6 py-3  text-white">
+                                    <span className="text-xl">{nav.icon}</span>
+                                    <span>{nav.name}</span>
+                                </p>
+                            </div>
+                        </Link>
 
                     </li>)
                 }
