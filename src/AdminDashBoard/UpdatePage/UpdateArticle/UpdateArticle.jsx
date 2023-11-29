@@ -1,11 +1,11 @@
 import { useState } from "react";
-import PreviweInfo from "../../UserDashBoard/PreviweInfo/PreviweInfo";
-import TermsAndCondition from "../../UserDashBoard/TermsAndCondition/TermsAndCondition";
-import { useForm } from "react-hook-form";
-import { MdOutlineRemoveCircleOutline } from "react-icons/md";
-import Swal from "sweetalert2";
 
-const SubmitJournals = () => {
+import { useForm } from "react-hook-form";
+
+import Swal from "sweetalert2";
+import { useParams } from "react-router-dom";
+
+const UpdateArticle = () => {
     const [inputLists, setInputLists] = useState([])
     const handleAdd = () => {
         setInputLists([...inputLists, ''])
@@ -16,11 +16,11 @@ const SubmitJournals = () => {
     //     newInputValues.splice(index, 1);
     //     setInputLists(newInputValues);
     // };
-
+    const {id} = useParams()
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/userarticles', {
-            method: 'POST',
+        fetch(`http://localhost:5000/articles/${id}`, {
+            method: "PATCH",
             headers: {
                 'content-type': 'application/json'
             },
@@ -28,27 +28,26 @@ const SubmitJournals = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.insertedId) {
-                    Swal.fire("Done your submite now its under review");
-                        
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    reset()
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Your Journals Update successlly',
+                        icon: 'success',
+                        confirmButtonText: 'Finised'
+                    })
                 }
-              
-                reset()
-
             })
 
-        
     }
     return (
         <div className="px-12 py-8 w-3/5">
-            <div className="flex items-center space-x-2 bg-[#F46957] py-2 px-4">
-                <p className="text-xl text-white"><MdOutlineRemoveCircleOutline /></p>
-                <p className="text-[#fff] text-sm font-bold">For Submit Your Article Please Completed Your Profile</p>
-            </div>
+             <h2 className="py-2 px-4 border font-bold text-sm">Update this article</h2>
 
             <div className="border my-8">
                 <div className="text-center py-4 bg-[#EF645A] text-white">
-                    <h2 className="text-xl font-bold">Article Information</h2>
+                    <h2 className="text-xl font-bold">Update Article Information</h2>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="py-8 px-6 space-y-3">
                     <div className="flex flex-col space-y-1">
@@ -63,7 +62,6 @@ const SubmitJournals = () => {
                         </div>
 
                         <div className="space-y-2 py-2">
-                            <label className="font-bold">Author 01</label>
                             <div className="space-y-2">
                                 <div className="flex flex-col space-y-1">
                                     <label className="text-sm font-semibold">Author Name:</label>
@@ -73,19 +71,13 @@ const SubmitJournals = () => {
                                     </div>
                                 </div>
                                 <div className="flex flex-col space-y-1">
-                                    <label className="text-sm font-semibold">Institute/University:</label>
+                                    <label className="text-sm font-semibold">Author Information:</label>
                                     <div className="w-full">
-                                        <input {...register("institute", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Institute or University Name..." />
-                                        {errors.institute && <span className='text-[red] text-sm'>institute/university name must be required</span>}
+                                        <input {...register("information", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Enter Author Info.." />
+                                        {errors.information && <span className='text-[red] text-sm'>Information required</span>}
                                     </div>
                                 </div>
-                                <div className="flex flex-col space-y-1">
-                                    <label className="text-sm font-semibold">Institutional Position</label>
-                                    <div className="w-full">
-                                        <input {...register("position", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Institutional Position.." />
-                                        {errors.position && <span className='text-[red] text-sm'>institutional position must be required</span>}
-                                    </div>
-                                </div>
+
 
 
                                 <div className="flex space-x-2">
@@ -103,65 +95,15 @@ const SubmitJournals = () => {
                                             <input {...register("seconEmail")} className="px-2 py-2 border outline-none w-full" type="text" placeholder="Enter Second Email.." />
                                         </div>
                                     </div>
-                                </div>
 
 
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <div className="py-2 px-2 bg-[#f4695718] text-[#EA5F5C] font-bold">
-                            <h2>Corrisponding Author:</h2>
-                        </div>
-
-                        <div className="space-y-2 py-2">
-
-                            <div className="space-y-2">
-                                <div className="flex flex-col space-y-1">
-                                    <label className="text-sm font-semibold">Author Name:</label>
-                                    <div className="w-full">
-                                        <input {...register("corrisponding", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Enter Author Name.." />
-                                        {errors.corrisponding && <span className='text-[red] text-sm'>corrisponding name must be required</span>}
-                                    </div>
-                                </div>
-                                <div className="flex flex-col space-y-1">
-                                    <label className="text-sm font-semibold">Institute/University:</label>
-                                    <div className="w-full">
-                                        <input {...register("cInstitute", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Institute or University Name..." />
-                                        {errors.cInstitute && <span className='text-[red] text-sm'>institute/university name must be required</span>}
-                                    </div>
-                                </div>
-                                <div className="flex flex-col space-y-1">
-                                    <label className="text-sm font-semibold">Institutional Position</label>
-                                    <div className="w-full">
-                                        <input {...register("cPosition", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Institutional Position.." />
-                                        {errors.cPosition && <span className='text-[red] text-sm'>institutional position must be required</span>}
-                                    </div>
-                                </div>
-
-
-                                <div className="flex space-x-2">
-                                    <div className="flex flex-col space-y-1 w-full">
-                                        <label className="text-sm font-semibold">Add First Email:</label>
-                                        <div className="w-full">
-                                            <input {...register("cFirstEmail", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Enter First Email.." />
-                                            {errors.cFirstEmail && <span className='text-[red] text-sm'>First Email must be required</span>}
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-col space-y-1 w-full">
-                                        <label className="text-sm font-semibold">Add Second Email (optional):</label>
-                                        <input {...register("cSecondEmail")} className="px-2 py-2 border outline-none" type="text" placeholder="Enter Second Email.." />
-                                    </div>
                                 </div>
 
                                 <div className="flex flex-col space-y-1">
                                     <label className="text-sm font-semibold">Contact Number</label>
                                     <div className="w-full">
-                                        <input {...register("cNumber", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Your Number.." />
-                                        {errors.cNumber && <span className='text-[red] text-sm'>contact number  required</span>}
+                                        <input {...register("number", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Your Number.." />
+                                        {errors.number && <span className='text-[red] text-sm'>contact number  required</span>}
                                     </div>
                                 </div>
 
@@ -170,10 +112,9 @@ const SubmitJournals = () => {
                         </div>
 
                     </div>
-
                     <div className="flex flex-col space-y-1">
                         <label className="text-sm font-semibold">Name of Journal:</label>
-                        <select className="py-2 px-2 outline-none border text-[#6c6b6b]">
+                        <select {...register("JournalName", { required: true })} className="py-2 px-2 outline-none border text-[#6c6b6b]">
                             <option>Select Journal</option>
                             <option value="Accounting">Accounting</option>
                             <option value="Agriculture">Agriculture</option>
@@ -189,6 +130,24 @@ const SubmitJournals = () => {
                         {errors.JournalName && <span className='text-[red] text-sm'>Journal name must be required</span>}
                     </div>
 
+                    <div className="flex space-x-2">
+                        <div className="flex flex-col space-y-1 w-full">
+                            <label className="text-sm font-semibold">DOI No:</label>
+                            <div className="w-full">
+                                <input {...register("DOI")} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Enter DOI No.." />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col space-y-1 w-full">
+                            <label className="text-sm font-semibold">DOI URL:</label>
+                            <div className="w-full">
+                                <input {...register("DOIURL")} className="px-2 py-2 border outline-none w-full" type="text" placeholder="Enter DOI URL.." />
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <div className="flex flex-col space-y-1">
                         <label className="text-sm font-semibold">Abstract:</label>
                         <textarea  {...register("abstract", { required: true })} className="py-2 px-2 outline-none border" cols="30" rows="4" placeholder="Write your abstract"></textarea>
@@ -200,7 +159,6 @@ const SubmitJournals = () => {
                         {errors.pdffile && <span className='text-[red] text-sm'>File must be required</span>}
                     </div>
                     <div>
-                        <p className="text-sm font-bold text-[#646464] cursor-pointer hover:text-[#EF645A] duration-300"><PreviweInfo></PreviweInfo></p>
                         <input className="py-2 px-12 cursor-pointer my-4 bg-[#EF645A] text-white hover:bg-[#22587E] duration-300" type="submit" value="Submit" />
                     </div>
                 </form>
@@ -208,4 +166,4 @@ const SubmitJournals = () => {
         </div>
     );
 };
-export default SubmitJournals;
+export default UpdateArticle;

@@ -42,14 +42,14 @@ const RecentJournals = () => {
 
     const [jounrals, setJounrals] = useState([])
     useEffect(() => {
-        fetch('jounrals.json')
+        fetch('http://localhost:5000/journals')
             .then(res => res.json())
             .then(data => {
                 setJounrals(data)
             })
     }, [])
 
-    const recent = jounrals.filter((jounral) => jounral.category === 'recently')
+
     return (
         <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-12">
             <div className="lg:flex items-center lg:gap-0 gap-6 lg:justify-between justify-center lg:text-left text-center">
@@ -70,7 +70,7 @@ const RecentJournals = () => {
             <div className="py-8 card-dots ">
                 <Slider   {...settings}>
                     {
-                        recent.map((jounral, index) => <Card className="" key={jounral.index} jounral={jounral} >
+                        jounrals.map((jounral) => <Card className="" key={jounral._id} jounral={jounral} >
 
                         </Card>)
                     }

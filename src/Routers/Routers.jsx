@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/HomePages/Home/Home";
 import Journals from "../Pages/JournalsPage/Journals/Journals";
@@ -26,123 +26,172 @@ import SubmitJournals from "../AdminDashBoard/SubmitJournals/SubmitJournals";
 import YourArticle from "../UserDashBoard/YourArticle/YourArticle";
 import TermsAndCondition from "../UserDashBoard/TermsAndCondition/TermsAndCondition";
 import ArticleStutes from "../UserDashBoard/ArticleStutes/ArticleStutes";
+import AdminLayout from "../Layout/AdminLayout";
+import AdminDashBoard from "../AdminDashBoard/AdminDashBoard";
+import AddJournals from "../AdminDashBoard/AddJournals/AddJournals";
+import ManageJournal from "../AdminDashBoard/ManageJournal/ManageJournal";
+import AddArticle from "../AdminDashBoard/AddArticle/AddArticle";
+import ManageArticle from "../AdminDashBoard/ManageArticle/ManageArticle";
+import ManageUser from "../AdminDashBoard/ManageUser/ManageUser";
+import UpdateJournal from "../AdminDashBoard/UpdatePage/UpdateJournal/UpdateJournal";
+import UpdateArticle from "../AdminDashBoard/UpdatePage/UpdateArticle/UpdateArticle";
 
 
-  
-export  const router = createBrowserRouter([
-    {
-      path: "/",
-      element:<Main></Main>,
-      children:[
-        {
-          path:"/",
-          element:<Home></Home>,
-        },
-        {
-          path:"/journals",
-          element:<Journals></Journals>,
-        },
-        {
-          path:"/Education",
-          element:<EducationPage></EducationPage>,
-        },
-        {
-          path:"/research",
-          element:<ResearchPage></ResearchPage>
-        },
-        {
-          path:"/detailsRearch",
-          element:<ResearchDetails></ResearchDetails>
-        },
-        {
-          path:"/traingpage",
-          element:<TrainingPage></TrainingPage>
-        },
-        {
-          path:"/teamPage",
-          element:<TeamPage></TeamPage>
-        },
-        {
-          path:"/contact",
-          element:<ContactPage></ContactPage>
-        },
-        
-      ]
-    },
-    {
-      path: "/journal",
-      element:<JournalLayout></JournalLayout>,
-      children:[
-        {
-          path:"/journal",
-          element:<JournalsDetailsHome></JournalsDetailsHome>
-        },
-        {
-          path:"/journal/editorialBoard",
-          element:<EditorialBoard></EditorialBoard>
-        },
-        {
-          path:"/journal/policy",
-          element:<JournalsPolice></JournalsPolice>
-        },
-        {
-          path:"/journal/faqpage",
-          element:<FaqPage></FaqPage>
-        },
-        {
-          path:"/journal/indexing",
-          element:<JournalIndex></JournalIndex>
-        },
-        {
-          path:"/journal/contact",
-          element:<ContactPage></ContactPage>
-        },
-        {
-          path:"/journal/news",
-          element:<JournalsNews></JournalsNews>
-        },
-        {
-          path:"/journal/subscribe",
-          element:<JournalSubscribe></JournalSubscribe>
-        }
-        
-      ],
 
-     
-    },
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/journals",
+        element: <Journals></Journals>,
+      },
+      {
+        path: "/journaldetails/:id",
+        element: <JournalsDetailsHome></JournalsDetailsHome>
+      },
+      {
+        path: "/Education",
+        element: <EducationPage></EducationPage>,
+      },
+      {
+        path: "/research",
+        element: <ResearchPage></ResearchPage>
+      },
+      {
+        path: "/detailsRearch",
+        element: <ResearchDetails></ResearchDetails>
+      },
+      {
+        path: "/traingpage",
+        element: <TrainingPage></TrainingPage>
+      },
+      {
+        path: "/teamPage",
+        element: <TeamPage></TeamPage>
+      },
+      {
+        path: "/contact",
+        element: <ContactPage></ContactPage>
+      },
 
-    {
-        path:"/userDashBoard",
-        element:<UserLayout></UserLayout>,
-        children:[
-          {
-            path:'/userDashBoard',
-            element:<UserDashBoard></UserDashBoard>
-          },
-          {
-            path:'/userDashBoard/submite',
-            element:<SubmitJournals></SubmitJournals>
-          },
-          {
-            path:'/userDashBoard/trems&condition',
-            element:<TermsAndCondition></TermsAndCondition>
-          },
-          {
-            path:'/userDashBoard/yourarticle',
-            element:<YourArticle></YourArticle>
-          },
-          {
-            path:'/userDashBoard/ariticleStutes',
-            element:<ArticleStutes></ArticleStutes>
-          }
-        ]
-    },
-    {
-      path:"/login",
-      element:<Login></Login>
-    },
-    {
-      path:"/signup",
-      element:<SingUp></SingUp>
-    },
-  ]);
+    ]
+  },
+  {
+    path: "/journal",
+    element: <JournalLayout></JournalLayout>,
+    children: [
+
+      {
+        path: "/journal/editorialBoard",
+        element: <EditorialBoard></EditorialBoard>
+      },
+      {
+        path: "/journal/policy",
+        element: <JournalsPolice></JournalsPolice>
+      },
+      {
+        path: "/journal/faqpage",
+        element: <FaqPage></FaqPage>
+      },
+      {
+        path: "/journal/indexing",
+        element: <JournalIndex></JournalIndex>
+      },
+      {
+        path: "/journal/contact",
+        element: <ContactPage></ContactPage>
+      },
+      {
+        path: "/journal/news",
+        element: <JournalsNews></JournalsNews>
+      },
+      {
+        path: "/journal/subscribe",
+        element: <JournalSubscribe></JournalSubscribe>
+      }
+
+    ],
+
+
+  },
+
+  {
+    path: "/userDashBoard",
+    element: <UserLayout></UserLayout>,
+    children: [
+      {
+        path: '/userDashBoard',
+        element: <UserDashBoard></UserDashBoard>
+      },
+      {
+        path: '/userDashBoard/submite',
+        element: <SubmitJournals></SubmitJournals>
+      },
+      {
+        path: '/userDashBoard/trems&condition',
+        element: <TermsAndCondition></TermsAndCondition>
+      },
+      {
+        path: '/userDashBoard/yourarticle',
+        element: <YourArticle></YourArticle>
+      },
+      {
+        path: '/userDashBoard/ariticleStutes',
+        element: <ArticleStutes></ArticleStutes>
+      }
+    ]
+  },
+
+  {
+    path: "/adminDashBoard",
+    element: <AdminLayout></AdminLayout>,
+    children: [
+      {
+        path: "/adminDashBoard",
+        element: <AdminDashBoard></AdminDashBoard>
+      },
+      {
+        path: "/adminDashBoard/addjournals",
+        element: <AddJournals></AddJournals>
+      },
+      {
+        path: "/adminDashBoard/updatejournal/:id",
+        element: <UpdateJournal></UpdateJournal>
+      },
+      {
+        path: "/adminDashBoard/managejournals",
+        element: <ManageJournal></ManageJournal>
+      },
+      {
+        path: "/adminDashBoard/addarticle",
+        element: <AddArticle></AddArticle>
+      },
+      {
+        path: "/adminDashBoard/managearticle",
+        element: <ManageArticle></ManageArticle>
+      },
+      {
+        path: "/adminDashBoard/updatearticle/:id",
+        element: <UpdateArticle></UpdateArticle>
+      },
+      {
+        path: "/adminDashBoard/manageuser",
+        element: <ManageUser></ManageUser>
+      }
+    ]
+  },
+  {
+    path: "/login",
+    element: <Login></Login>
+  },
+  {
+    path: "/signup",
+    element: <SingUp></SingUp>
+  },
+]);

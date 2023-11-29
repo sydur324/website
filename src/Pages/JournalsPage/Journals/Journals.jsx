@@ -7,17 +7,17 @@ const Journals = () => {
     const [journalls] = useJournals()
     const [journals, setJournals] = useState([])
     useEffect(() => {
-        fetch('jounrals.json')
+        fetch('http://localhost:5000/journals')
             .then(res => res.json())
             .then(data => {
                 setJournals(data)
             })
     }, [])
 
-    const subList = [... new Set(journalls.map((sub) => sub.subjects))]
-    const filterSub = (subject) => {
-        const newSub = journalls.filter((newSubject) => newSubject.subjects === subject)
-        setJournals(newSub)
+    const subList = [... new Set(journalls.map((sub) => sub.category))]
+    const filterSub = (category) => {
+        const newCat = journalls.filter((newCategory) => newCategory.category === category)
+        setJournals(newCat)
     }
 
     return (

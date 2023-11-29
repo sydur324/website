@@ -18,6 +18,7 @@ const Navbar = () => {
         { id: 5, name: "Training", to: "traingpage" },
         { id: 6, name: "Global Team", to: "teamPage" },
         { id: 7, name: "Contact", to: "contact" },
+        { id: 8, name: "AdminBoard", to: "/adminDashBoard" },
     ]
 
     const [isOpen, setIsOpen] = useState(false)

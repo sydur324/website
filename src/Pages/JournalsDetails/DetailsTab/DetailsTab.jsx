@@ -7,7 +7,7 @@ import AboutWEG from "../AboutWEG/AboutWEG";
 
 const DetailsTab = ({ item }) => {
 
-    const { title, decription, editorialBoard,advisarBoard, papers, shortTitle, archives, currentArticles } = item
+    
 
     const [toggle, setToggle] = useState(1)
     const toggleTab = (index) => {
@@ -92,7 +92,8 @@ const DetailsTab = ({ item }) => {
                         <h2 className="font-bold">Aims & Scope</h2>
 
                         <div className="py-4">
-                            <p className="leading-8">{decription}</p>
+                            <p>{item.amis}</p>
+
                         </div>
                     </div>
                 </div>
@@ -101,24 +102,6 @@ const DetailsTab = ({ item }) => {
                     <div className="border my-4 py-4 px-4">
                         <h2 className="font-bold">Editorial Board</h2>
 
-                        <div className="py-4">
-                            <div>
-                                {
-                                    editorialBoard.map((editor, index) => <div key={index}>
-                                        <div>
-                                            <div>
-                                                <p>Editor:</p>
-                                                <h2>{editor.editor}</h2>
-                                            </div>
-                                            <div>
-                                                <p>Desganition:</p>
-                                                <h2>{editor.poforion}</h2>
-                                            </div>
-                                        </div>
-                                    </div>)
-                                }
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -126,33 +109,16 @@ const DetailsTab = ({ item }) => {
                     <div className="border my-4 py-4 px-4">
                         <h2 className="font-bold">International Advisory Board</h2>
 
-                        <div className="py-4">
-                            <div>
-                                {
-                                    advisarBoard.map((editor, index) => <div key={index}>
-                                        <div>
-                                            <div>
-                                                <p>Editor:</p>
-                                                <h2>{editor.editor}</h2>
-                                            </div>
-                                            <div>
-                                                <p>Desganition:</p>
-                                                <h2>{editor.poforion}</h2>
-                                            </div>
-                                        </div>
-                                    </div>)
-                                }
-                            </div>
-                        </div>
+                      
                     </div>
                 </div>
 
                 <div className={toggle === 4 ? "content active-content" : "content"}>
-                    <CurrentJournal currentArticles={currentArticles}></CurrentJournal>
+                    hi
                 </div>
 
                 <div className={toggle === 5 ? "content active-content" : "content"}>
-                    <AboutWEG></AboutWEG>
+                    hi
                 </div>
                 <div className={toggle === 6 ? "content active-content" : "content"}>
                     <div className="border my-4 py-4 px-4">
@@ -172,13 +138,7 @@ const DetailsTab = ({ item }) => {
                                 A full double-blind refereeing process is used that comprises of the following steps.
                             </p>
 
-                            <div className="space-y-2 py-3">
-                                {
-                                    proces.map((pro, index) => <div key={index}>
-                                        <li className="list-none flex  space-x-2 font-medium cursor-pointer hover:text-[#EF645A] duration-300"><span className="lg:pt-1 text-[#EF645A] text-xl"><IoIosCheckboxOutline /></span><span>{pro.rule}</span></li>
-                                    </div>)
-                                }
-                            </div>
+                            
 
                             <div className="py-4">
                                 <h2 className="font-bold">Copyright</h2>
@@ -211,7 +171,7 @@ const DetailsTab = ({ item }) => {
                 </div>
 
                 <div className={toggle === 7 ? "content active-content" : "content"}>
-                    <JournalArchive archives={archives}></JournalArchive>
+                  hi
                 </div>
 
                 <div className={toggle === 8 ? "content active-content" : "content"}>
@@ -219,7 +179,7 @@ const DetailsTab = ({ item }) => {
                         <h2 className="font-bold">Call for Papers</h2>
 
                         <div className="py-4">
-                            <p className=""><span className="font-medium">{papers}</span>  is a quarterly peer reviewed journal published by
+                            <p className="">  is a quarterly peer reviewed journal published by
                                 <span className="text-[#F46957] px-1 cursor-pointer hover:border-b border-[#f4695765]">Center for Promoting Ideas (CPI).</span>
                             </p>
 
@@ -235,7 +195,7 @@ const DetailsTab = ({ item }) => {
                             </p>
 
                             <p>
-                                <span>{shortTitle}</span> publishes original papers, review papers, conceptual
+                                 publishes original papers, review papers, conceptual
                                 framework, analytical and simulation models, case studies,
                                 empirical research, technical notes, and book reviews.
                             </p>

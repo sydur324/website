@@ -143,7 +143,7 @@ const JournalsBody = ({ journals }) => {
                         <>
                             <div className="my-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-2">
                                 {
-                                    currentItems.map((jounral, index) => <Card key={jounral.index} jounral={jounral}>
+                                    currentItems.map((jounral) => <Card key={jounral._id} jounral={jounral}>
 
                                     </Card>)
                                 }
