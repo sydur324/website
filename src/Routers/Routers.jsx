@@ -5,7 +5,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/HomePages/Home/Home";
 import Journals from "../Pages/JournalsPage/Journals/Journals";
 import JournalLayout from "../Layout/JournalLayout";
-import EditorialBoard from "../Pages/JournalsDetails/JournalFixedContent/EditorialBoard/EditorialBoard";
+import EditorialBoard from "../Pages/JournalsDetails/EditorialBoard/EditorialBoard";
 import FaqPage from "../Pages/JournalsDetails/JournalFixedContent/FaqPage/FaqPage";
 import JournalsDetailsHome from "../Pages/JournalsDetails/JournalsDetailsHome/JournalsDetailsHome";
 import JournalsPolice from "../Pages/JournalsDetails/JournalsPolice/JournalsPolice";
@@ -35,6 +35,14 @@ import ManageArticle from "../AdminDashBoard/ManageArticle/ManageArticle";
 import ManageUser from "../AdminDashBoard/ManageUser/ManageUser";
 import UpdateJournal from "../AdminDashBoard/UpdatePage/UpdateJournal/UpdateJournal";
 import UpdateArticle from "../AdminDashBoard/UpdatePage/UpdateArticle/UpdateArticle";
+import AddEditor from "../AdminDashBoard/Board/AddEditor/AddEditor";
+import UpdateEditor from "../AdminDashBoard/UpdatePage/UpdateEditor/UpdateEditor";
+import AddAdviser from "../AdminDashBoard/Board/AddAdviser/AddAdviser";
+import UpdateAdviser from "../AdminDashBoard/UpdatePage/UpdateAdviser/UpdateAdviser";
+import AddMembers from "../AdminDashBoard/Members/AddMembers/AddMembers";
+import ManageMembers from "../AdminDashBoard/ManageMembers/ManageMembers";
+import UpdateMembers from "../AdminDashBoard/UpdatePage/UpdateMembers/UpdateMembers";
+import AddArchive from "../AdminDashBoard/Archive/AddArchive";
 
 
 
@@ -183,7 +191,39 @@ export const router = createBrowserRouter([
       {
         path: "/adminDashBoard/manageuser",
         element: <ManageUser></ManageUser>
-      }
+      },
+      {
+        path: "/adminDashBoard/addormanageEdotor",
+        element: <AddEditor></AddEditor>
+      },
+      {
+        path: "/adminDashBoard/updateeditor/:id",
+        element: <UpdateEditor></UpdateEditor>
+      },
+      {
+        path: "/adminDashBoard/addormanageAdvaser",
+        element: <AddAdviser></AddAdviser>
+      },
+      {
+        path: "/adminDashBoard/updateadviser/:id",
+        element: <UpdateAdviser></UpdateAdviser>
+      },
+      {
+        path: "/adminDashBoard/addmembers",
+        element: <AddMembers></AddMembers>
+      },
+      {
+        path: "/adminDashBoard/managemenbers",
+        element: <ManageMembers></ManageMembers>
+      },
+      {
+        path: "/adminDashBoard/updatemember/:id",
+        element: <UpdateMembers></UpdateMembers>
+      },
+      {
+        path: "/adminDashBoard/archive",
+        element: <AddArchive></AddArchive>
+      },
     ]
   },
   {

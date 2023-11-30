@@ -4,6 +4,9 @@ import { IoIosCheckboxOutline } from "react-icons/io";
 import JournalArchive from "../JournalArchive/JournalArchive";
 import CurrentJournal from "../CurrentJournal/CurrentJournal";
 import AboutWEG from "../AboutWEG/AboutWEG";
+import EditorialBoard from "../EditorialBoard/EditorialBoard";
+import AdviserBoard from "../AdviserBoard/AdviserBoard";
+import CurrentModel from "../CurrentModel/CurrentModel";
 
 const DetailsTab = ({ item }) => {
 
@@ -101,7 +104,7 @@ const DetailsTab = ({ item }) => {
                 <div className={toggle === 2 ? "content active-content" : "content"}>
                     <div className="border my-4 py-4 px-4">
                         <h2 className="font-bold">Editorial Board</h2>
-
+                        <EditorialBoard></EditorialBoard>
                     </div>
                 </div>
 
@@ -109,12 +112,12 @@ const DetailsTab = ({ item }) => {
                     <div className="border my-4 py-4 px-4">
                         <h2 className="font-bold">International Advisory Board</h2>
 
-                      
+                      <AdviserBoard></AdviserBoard>
                     </div>
                 </div>
 
                 <div className={toggle === 4 ? "content active-content" : "content"}>
-                    hi
+                    <CurrentJournal></CurrentJournal>
                 </div>
 
                 <div className={toggle === 5 ? "content active-content" : "content"}>

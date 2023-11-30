@@ -11,14 +11,15 @@ const AdminNav = () => {
     const adminNavLink = [
         { id: 1, name: "Admin Home", to: "/adminDashBoard", icon: <FaHome /> },
         { id: 2, name: "Add Journals", to: "/adminDashBoard/addjournals", icon: <RiFolderUploadFill /> },
-        { id: 2, name: "Manage Journals", to: "/adminDashBoard/managejournals", icon: <MdArticle /> },
-        { id: 2, name: "Add Article", to: "/adminDashBoard/addarticle", icon: <GiConvergenceTarget /> },
-        { id: 2, name: "Manage Article", to: "/adminDashBoard/managearticle", icon: <IoSettingsSharp /> },
-        { id: 2, name: "Manage User", to: "/adminDashBoard/manageuser", icon: <IoSettingsSharp /> },
-        { id: 2, name: "Add & Manage Editorial", to: "", icon: <IoSettingsSharp /> },
-        { id: 2, name: "Add & Manage Advisory", to: "", icon: <IoSettingsSharp /> },
-        { id: 2, name: "Add Member", to: "", icon: <IoSettingsSharp /> },
-        { id: 2, name: "Manage Member", to: "", icon: <IoSettingsSharp /> },
+        { id: 3, name: "Manage Journals", to: "/adminDashBoard/managejournals", icon: <MdArticle /> },
+        { id: 4, name: "Add Article", to: "/adminDashBoard/addarticle", icon: <GiConvergenceTarget /> },
+        { id: 5, name: "Manage Article", to: "/adminDashBoard/managearticle", icon: <IoSettingsSharp /> },
+        { id: 6, name: "Manage User", to: "/adminDashBoard/manageuser", icon: <IoSettingsSharp /> },
+        { id: 7, name: "Add & Manage Editorial", to: "/adminDashBoard/addormanageEdotor", icon: <IoSettingsSharp /> },
+        { id: 8, name: "Add & Manage Advisory", to: "/adminDashBoard/addormanageAdvaser", icon: <IoSettingsSharp /> },
+        { id: 9, name: "Add Member", to: "/adminDashBoard/addmembers", icon: <IoSettingsSharp /> },
+        { id: 10, name: "Manage Member", to: "/adminDashBoard/managemenbers", icon: <IoSettingsSharp /> },
+        { id: 11, name: "Archive", to: "/adminDashBoard/archive", icon: <IoSettingsSharp /> },
     ]
 
     const commonLink = [

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { MdOutlineRemoveCircleOutline } from "react-icons/md";
 import Swal from "sweetalert2";
 
-const AddArticle = () => {
+const AddArchive = () => {
     const [inputLists, setInputLists] = useState([])
     const handleAdd = () => {
         setInputLists([...inputLists, ''])
@@ -19,7 +19,7 @@ const AddArticle = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/articles', {
+        fetch('http://localhost:5000/archives', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +29,7 @@ const AddArticle = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    Swal.fire("Add  Article");
+                    Swal.fire("Add  archive");
 
                 }
 
@@ -39,11 +39,11 @@ const AddArticle = () => {
     }
     return (
         <div className="px-12 py-8 w-3/5">
-            <h2 className="py-2 px-4 border font-bold text-sm">Add Article Page</h2>
+            <h2 className="py-2 px-4 border font-bold text-sm">Add Archive</h2>
 
             <div className="border my-8">
                 <div className="text-center py-4 bg-[#EF645A] text-white">
-                    <h2 className="text-xl font-bold">Article Information</h2>
+                    <h2 className="text-xl font-bold">Archive Information</h2>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="py-8 px-6 space-y-3">
                     <div className="flex flex-col space-y-1">
@@ -127,6 +127,7 @@ const AddArticle = () => {
                     </div>
 
                     <div className="flex space-x-2">
+
                         <div className="flex flex-col space-y-1 w-full">
                             <label className="text-sm font-semibold">DOI No:</label>
                             <div className="w-full">
@@ -141,7 +142,14 @@ const AddArticle = () => {
                             </div>
                         </div>
 
+                    </div>
 
+                    <div className="flex flex-col space-y-1">
+                        <label className="text-sm font-semibold">Year:</label>
+                        <div className="w-full">
+                            <input {...register("year", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="enter year.." />
+                            {errors.year && <span className='text-[red] text-sm'>year  required</span>}
+                        </div>
                     </div>
 
                     <div className="flex flex-col space-y-1">
@@ -150,6 +158,25 @@ const AddArticle = () => {
                             <input {...register("date", { required: true })} className="w-full px-2 py-2 border outline-none" type="text" placeholder="enter date.." />
                             {errors.date && <span className='text-[red] text-sm'>date  required</span>}
                         </div>
+                    </div>
+
+
+                    <div className="flex space-x-2">
+
+                        <div className="flex flex-col space-y-1 w-full">
+                            <label className="text-sm font-semibold">Volum No:</label>
+                            <div className="w-full">
+                                <input {...register("volum")} className="w-full px-2 py-2 border outline-none" type="text" placeholder="Enter volum No.." />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col space-y-1 w-full">
+                            <label className="text-sm font-semibold">Volum Serial:</label>
+                            <div className="w-full">
+                                <input {...register("volumserial")} className="px-2 py-2 border outline-none w-full" type="text" placeholder="Enter DOI URL.." />
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className="flex flex-col space-y-1">
@@ -170,4 +197,4 @@ const AddArticle = () => {
         </div>
     );
 };
-export default AddArticle;
+export default AddArchive;
