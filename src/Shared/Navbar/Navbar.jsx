@@ -155,7 +155,9 @@ const Navbar = () => {
                             <div className='flex items-center justify-center space-x-6'>
 
                                 <div className='h-full  bg-[#F96E54] px-6 py-4  text-white relative inline-block hover:bg-[#005581] duration-300 cursor-pointer'>
-                                    <button className=''>Submited Your Journals</button>
+                                    <Link to='/userDashBoard/submite'>
+                                        <button className=''>Submited Your Article</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

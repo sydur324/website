@@ -3,6 +3,7 @@ import { MdDelete, MdOutlineRemoveCircleOutline } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
 import useArticle from "../../Hooks/useArticle";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ManageArticle = () => {
 
@@ -15,7 +16,13 @@ const ManageArticle = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if(data.deletedCount > 0){
+                    Swal.fire(
+                        'Deleted!',
+                        'Article has been deleted.',
+                        'success'
+                      )
+                }
                 refetch()
             })
     }

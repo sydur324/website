@@ -2,6 +2,7 @@ import { MdDelete } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import useJournals from "../../Hooks/useJournals";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 const ManageJournal = () => {
 
     const [journalls, refetch] = useJournals()
@@ -13,7 +14,13 @@ const ManageJournal = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if(data.deletedCount > 0){
+                    Swal.fire(
+                        'Deleted!',
+                        'Journal has been deleted.',
+                        'success'
+                      )
+                }
                 refetch()
             })
     }

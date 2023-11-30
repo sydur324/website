@@ -1,8 +1,8 @@
 
 const AdminHome = () => {
     return (
-        <div className="">
-               
+        <div className="py-4 w-3/4">
+               <h2>this is admin home</h2>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 
 import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import { FaGooglePlusG } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SingUp = () => {
     const [show, setShow] = useState(false)
@@ -18,17 +19,53 @@ const SingUp = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/'
-    const {createUser,signInWithGoogle,updateUserProfile} = useContext(AuthContext)
+    const { createUser, signInWithGoogle, updateUserProfile } = useContext(AuthContext)
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         createUser(data.email, data.password)
-        .then(result =>{
-            const startUser = result.user
-            updateUserProfile(data.name, data.photoURL)
-            console.log(startUser)
-            navigate(from, {replace:true})
-        })
+            .then(result => {
+                const startUser = result.user
+                updateUserProfile(data.name, data.photoURL)
+                console.log(startUser)
+                navigate(from, { replace: true })
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        const saveUser = {
+                            name: data.name, photo: data.photoURL,
+                            institute: data.institute, depatment: data.depatment,
+                            position:data.position, phoneNumber:data.phoneNumber,
+                            email:data.email
+                        }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset()
+                                    Swal.fire("Thnx for join us");
+                                }
+
+                            })
+
+                    })
+            })
+            .catch(err => console.log(err.message))
+
+    }
+
+    const handleGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                const googleUser = result.user
+                console.log(googleUser)
+                navigate(from, { replace: true })
+            })
     }
     return (
         <div className="xl:px-20 lg:px-16 md:px-14 sm:px-12 px-12 py-14">
@@ -107,8 +144,8 @@ const SingUp = () => {
                         <h2 className="text-center  font-bold">Sign up with</h2>
 
                         <div className='flex items-center justify-center space-x-2'>
-                            <a className='px-2 py-2  bg-[#4B68A8] text-white rounded-full hover:bg-[#3674fa] hover:scale-105 duration-300' href='https://www.facebook.com/' target="_blank"><FaFacebookF /></a>
-                            <a className='px-2 py-2  bg-[#D43B78] text-white rounded-full hover:bg-[#ff3787] hover:scale-105 duration-300' href='https://www.instagram.com/' target="_blank"><FaInstagram /></a>
+                            <p onClick={handleGoogle} className='px-2 py-2  bg-[#E43A39] cursor-pointer text-white rounded-full hover:bg-[#3674fa] hover:scale-105 duration-300'><FaGooglePlusG /></p>
+                            <a className='px-2 py-2  bg-[#D43B78] text-white rounded-full hover:bg-[#ff3787] hover:scale-105 duration-300' href='' target="_blank"><FaFacebookF/></a>
                             <a className='px-2 py-2  bg-[#3098E7] text-white rounded-full hover:bg-[#2ca3ff] hover:scale-105 duration-300' href='https://twitter.com/' target="_blank"><FaTwitter /></a>
                             <a className='px-2 py-2  bg-[#2E66AA] text-white rounded-full hover:bg-[#2f8dff] hover:scale-105 duration-300' href='https://bd.linkedin.com/' target="_blank"><FaLinkedinIn /></a>
                         </div>

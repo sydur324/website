@@ -43,6 +43,8 @@ import AddMembers from "../AdminDashBoard/Members/AddMembers/AddMembers";
 import ManageMembers from "../AdminDashBoard/ManageMembers/ManageMembers";
 import UpdateMembers from "../AdminDashBoard/UpdatePage/UpdateMembers/UpdateMembers";
 import AddArchive from "../AdminDashBoard/Archive/AddArchive";
+import PrivateRoute from "./PrivateRoute";
+
 
 
 
@@ -139,7 +141,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/userDashBoard/submite',
-        element: <SubmitJournals></SubmitJournals>
+        element: <PrivateRoute><SubmitJournals></SubmitJournals></PrivateRoute>
       },
       {
         path: '/userDashBoard/trems&condition',

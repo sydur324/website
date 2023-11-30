@@ -174,7 +174,7 @@ const DetailsTab = ({ item }) => {
                 </div>
 
                 <div className={toggle === 7 ? "content active-content" : "content"}>
-                  hi
+                  <JournalArchive></JournalArchive>
                 </div>
 
                 <div className={toggle === 8 ? "content active-content" : "content"}>
